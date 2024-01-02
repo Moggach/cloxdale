@@ -1,10 +1,8 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useLiveQuery } from 'next-sanity/preview'
-
-import Card from '~/components/Card'
-import Container from '~/components/Container'
-import Welcome from '~/components/Welcome'
 import { readToken } from '~/lib/sanity.api'
+import Card from '~/components/Card'
+
 import { getClient } from '~/lib/sanity.client'
 import { getPosts, type Post, postsQuery } from '~/lib/sanity.queries'
 import type { SharedPageProps } from '~/pages/_app'
@@ -31,14 +29,14 @@ export default function IndexPage(
 ) {
   const [posts] = useLiveQuery<Post[]>(props.posts, postsQuery)
   return (
-    <Container>
       <section>
+           <h1 className="text-2xl font-bold underline">This is Tailwind</h1>
+
         {posts.length ? (
           posts.map((post) => <Card key={post._id} post={post} />)
         ) : (
-          <Welcome />
+        <p> no posts </p>
         )}
       </section>
-    </Container>
   )
 }
