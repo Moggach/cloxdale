@@ -35,6 +35,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'externalLink',
+      title: 'External link',
+      type: 'string',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
