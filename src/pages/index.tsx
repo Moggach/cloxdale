@@ -2,6 +2,9 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useLiveQuery } from 'next-sanity/preview'
 import { readToken } from '~/lib/sanity.api'
 import Card from '~/components/Card'
+import Footer from '~/components/Footer'
+import Header from '~/components/Header'
+
 
 import { getClient } from '~/lib/sanity.client'
 import { getPosts, type Post, postsQuery } from '~/lib/sanity.queries'
@@ -29,14 +32,10 @@ export default function IndexPage(
 ) {
   const [posts] = useLiveQuery<Post[]>(props.posts, postsQuery)
   return (
-      <section>
-           <h1 className="text-2xl font-bold underline">This is Tailwind</h1>
-
-        {posts.length ? (
-          posts.map((post) => <Card key={post._id} post={post} />)
-        ) : (
-        <p> no posts </p>
-        )}
-      </section>
+    <>
+    <Header/>
+  
+      <Footer/>
+      </>
   )
 }
