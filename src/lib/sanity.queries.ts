@@ -51,3 +51,18 @@ export type Credit = {
   };
   body: string;
  };
+
+ export type heroSection = {
+  _id: string;
+  title: string;
+  slug: {
+    current: string;
+  };
+  excerpt: string;
+  mainImage: {
+    asset: {
+      url: string;
+    };
+  };
+  body: string;
+ };
