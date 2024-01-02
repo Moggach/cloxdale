@@ -1,8 +1,9 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useLiveQuery } from 'next-sanity/preview'
 import { readToken } from '~/lib/sanity.api'
-import Footer from '~/components/Footer'
-import Header from '~/components/Header'
+
+import Layout from '~/components/Layout'
+
 
 
 import { getClient } from '~/lib/sanity.client'
@@ -27,7 +28,7 @@ export const getStaticProps: GetStaticProps<
       draftMode,
       token: draftMode ? readToken : '',
       posts,
-      credits, // And this line
+      credits, 
 
     },
   }
@@ -41,14 +42,14 @@ export default function IndexPage(
  
   return (
     <>
-      <Header/>
+      <Layout>
       {credits.map((credit) => ( // Add these lines
         <div key={credit._id}>
           <h2>{credit.title}</h2>
           <p>{credit.excerpt}</p>
         </div>
       ))}
-      <Footer/>
+      </Layout>
     </>
   )
  }
