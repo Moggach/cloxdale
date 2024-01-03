@@ -47,7 +47,7 @@ export default function IndexPage(
        {sections.map((section) => (
          <HeroSection key={section._id} section={section} />
        ))}
-       <div id="credits"className="flex flex-row gap-3">
+       <div id="credits">
         {credits.map((credit) => (
          <Credits key={credit._id} credit={credit} />
        ))}
