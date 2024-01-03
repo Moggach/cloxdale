@@ -37,23 +37,20 @@ export const getStaticProps: GetStaticProps<
 export default function IndexPage(
   props: InferGetStaticPropsType<typeof getStaticProps>,
 ) {
-  const sections = props.sections 
-  const credits = props.credits 
+  const sections = props.sections
+  const credits = props.credits
 
 
   return (
     <>
-    <Layout>
-       {sections.map((section) => (
-         <HeroSection key={section._id} section={section} />
-       ))}
-       <div id="credits">
-        {credits.map((credit) => (
-         <Credits key={credit._id} credit={credit} />
-       ))}
-       </div>
+      <Layout>
+        {sections.map((section) => (
+          <HeroSection key={section._id} section={section} />
+        ))}
+        <Credits credit={credits} />
 
-     </Layout>
+
+      </Layout>
     </>
   )
 }
