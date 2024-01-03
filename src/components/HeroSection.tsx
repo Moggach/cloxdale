@@ -4,10 +4,10 @@ import { urlForImage } from '~/lib/sanity.image'
 const HeroSection = ({ section }) => {
  return (
    <div className="flex flex-col gap-3">
-     {section.excerpt}
+     {section[0].excerpt}
      <Image
        className=""
-       src={urlForImage(section.mainImage).width(500).height(300).url()}
+       src={urlForImage(section[0].mainImage).width(500).height(300).url()}
        height={300}
        width={500}
        alt=""

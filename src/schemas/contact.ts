@@ -6,6 +6,11 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
       name: 'name',
       title: 'Name',
       type: 'string',
@@ -15,17 +20,6 @@ export default defineType({
       title: 'Link',
       type: 'string',
     }),
- 
-  ],
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
-    },
-  },
+  
+  ]
 })

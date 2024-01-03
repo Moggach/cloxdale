@@ -11,24 +11,13 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      validation: (Rule) => Rule.required(),
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    }),
-    defineField({
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'text',
-      rows: 4,
+      type: 'blockContent'
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -39,21 +28,6 @@ export default defineType({
       title: 'External link',
       type: 'string',
     }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
   ],
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
-    },
-  },
+
 })

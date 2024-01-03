@@ -21,14 +21,8 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'text',
-      rows: 4,
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -39,16 +33,5 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
-  ],
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
-    },
-  },
+  ]
 })

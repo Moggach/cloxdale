@@ -20,7 +20,7 @@ const Credits = ({ credit }) => {
                                 <h3>{credit.title}</h3>
                                 <Image
                                     className=""
-                                    src={urlForImage(credit.mainImage).width(500).height(300).url()}
+                                    src={urlForImage(credit.image).width(500).height(300).url()}
                                     height={300}
                                     width={500}
                                     alt=""

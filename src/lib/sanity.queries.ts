@@ -44,13 +44,22 @@ export type Credit = {
     current: string;
   };
   excerpt: string;
-  mainImage: {
+  image: {
     asset: {
       url: string;
     };
   };
-  body: string;
+  externalLink: string;
  };
+
+ export type Contact = {
+  _id: string;
+  title: string;
+  name: string;
+  link: string;
+ };
+
+
 
  export type heroSection = {
   _id: string;
@@ -58,8 +67,7 @@ export type Credit = {
   slug: {
     current: string;
   };
-  excerpt: string;
-  mainImage: {
+  image: {
     asset: {
       url: string;
     };

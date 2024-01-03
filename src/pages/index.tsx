@@ -5,6 +5,7 @@ import { getClient } from '~/lib/sanity.client'
 import type { SharedPageProps } from '~/pages/_app'
 import type { heroSection } from '~/lib/sanity.queries'
 import type { Credit } from '~/lib/sanity.queries'
+import type { Contact } from '~/lib/sanity.queries'
 import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
@@ -13,17 +14,14 @@ import Contacts from '~/components/Contacts'
 
 export const getStaticProps: GetStaticProps<
   SharedPageProps & {
-    sections: heroSection[]
+    section: heroSection[]
     credits: Credit[]
-    contacts: Contacts[]
-
-
-
+    contacts: Contact[]
   }
 
 > = async ({ draftMode = false }) => {
   const client = getClient(draftMode ? { token: readToken } : undefined)
-  const sections = await client.fetch(`*[_type == "HeroSection"]`)
+  const section = await client.fetch(`*[_type == "HeroSection"]`)
   const credits = await client.fetch(`*[_type == "credit"]`)
   const contacts = await client.fetch(`*[_type == "contact"]`)
 
@@ -33,7 +31,7 @@ export const getStaticProps: GetStaticProps<
     props: {
       draftMode,
       token: draftMode ? readToken : '',
-      sections,
+      section,
       credits,
       contacts
 
@@ -44,7 +42,7 @@ export const getStaticProps: GetStaticProps<
 export default function IndexPage(
   props: InferGetStaticPropsType<typeof getStaticProps>,
 ) {
-  const sections = props.sections
+  const section = props.section
   const credits = props.credits
   const contacts = props.contacts
 
@@ -53,9 +51,7 @@ export default function IndexPage(
   return (
     <>
       <Layout>
-        {sections.map((section) => (
-          <HeroSection key={section._id} section={section} />
-        ))}
+        <HeroSection section={section} />
         <Credits credit={credits} />
         <Contacts contacts={contacts} />
 
