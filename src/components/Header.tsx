@@ -17,7 +17,7 @@ const Navbar = () => {
   return () => {
     window.removeEventListener('scroll', handleScroll);
   };
- }, []); // Empty dependency array means this effect runs once on mount
+ }, [navbarRef]); // Empty dependency array means this effect runs once on mount
 
  return (
   <nav
