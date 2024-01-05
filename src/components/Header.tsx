@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
- const [isSticky, setSticky] = useState(false);
- const navbarRef = React.createRef();
+ const [isSticky, setSticky] = useState(false)
+ const navbarRef = React.createRef<HTMLDivElement>(); 
 
  useEffect(() => {
   const handleScroll = () => {
@@ -17,8 +17,7 @@ const Navbar = () => {
   return () => {
     window.removeEventListener('scroll', handleScroll);
   };
- }, [navbarRef]); // Empty dependency array means this effect runs once on mount
-
+ }, [navbarRef]); 
  return (
   <nav
     ref={navbarRef}
