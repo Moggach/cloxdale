@@ -1,21 +1,39 @@
 import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 
-export default function Header() {
+const Navbar = () => {
+ const [isSticky, setSticky] = useState(false);
+ const navbarRef = React.createRef();
+
+ const handleScroll = () => {
+  if (navbarRef.current) {
+    setSticky(window.pageYOffset >= navbarRef.current.offsetTop);
+  }
+ };
+
+ useEffect(() => {
+  window.addEventListener('scroll', handleScroll);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+ }, []);
+
  return (
-   <header className="p-4">
-   <nav className="flex justify-between items-center">
-    <div> <div className="text-lg font-bold">CAMERON LOXDALE</div>
+  <nav
+    ref={navbarRef}
+    className="z-10 bg-gray-100 h-[100px] sticky top-0 p-4 flex flex-col md:flex-row justify-between md:items-center "
+  >
+      <div> <div className="text-lg font-bold">CAMERON LOXDALE</div>
       <p>Comedy Writer</p>
       </div>
    
-      <ul className="flex space-x-4">
-        <li><Link href="/" className="">Home</Link></li>
-        <li><Link href="#contact" className="">Contact</Link></li>
-        <li><Link href="#credits" className="">Credits</Link></li>
-        <li><Link href="#nonsense" className="">Nonsense</Link></li>
-
-      </ul>
-    </nav>
-   </header>
+    <ul className="flex space-x-4">
+      <li><Link href="#contact"><span className="">Contact</span></Link></li>
+      <li><Link href="#credits"><span className="">Credits</span></Link></li>
+      <li><Link href="#nonsense"><span className="">Nonsense</span></Link></li>
+    </ul>
+  </nav>
  );
-}
+};
+
+export default Navbar;
