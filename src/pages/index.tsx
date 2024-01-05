@@ -21,9 +21,10 @@ export const getStaticProps: GetStaticProps<
 
 > = async ({ draftMode = false }) => {
   const client = getClient(draftMode ? { token: readToken } : undefined)
-  const section = await client.fetch(`*[_type == "HeroSection"]`)
+  const section = await client.fetch(`*[_type == "heroSection"]`)
   const credits = await client.fetch(`*[_type == "credit"]`)
   const contacts = await client.fetch(`*[_type == "contact"]`)
+  
 
 
 
@@ -47,13 +48,12 @@ export default function IndexPage(
   const contacts = props.contacts
 
 
-
   return (
     <>
       <Layout>
         <HeroSection section={section} />
-        <Credits credit={credits} />
         <Contacts contacts={contacts} />
+        <Credits credit={credits} />
 
 
 
