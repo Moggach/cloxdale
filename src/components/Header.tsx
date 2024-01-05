@@ -5,18 +5,19 @@ const Navbar = () => {
  const [isSticky, setSticky] = useState(false);
  const navbarRef = React.createRef();
 
- const handleScroll = () => {
-  if (navbarRef.current) {
-    setSticky(window.pageYOffset >= navbarRef.current.offsetTop);
-  }
- };
-
  useEffect(() => {
+  const handleScroll = () => {
+    if (navbarRef.current) {
+      setSticky(window.pageYOffset >= navbarRef.current.offsetTop);
+    }
+  };
+
   window.addEventListener('scroll', handleScroll);
+
   return () => {
     window.removeEventListener('scroll', handleScroll);
   };
- }, [handleScroll]);
+ }, []); // Empty dependency array means this effect runs once on mount
 
  return (
   <nav
