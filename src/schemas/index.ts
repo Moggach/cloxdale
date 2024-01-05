@@ -4,11 +4,13 @@ import blockContent from './blockContent'
 import credit from './credit'
 import heroSection from './heroSection'
 import contact from './contact'
+import nonsense from './nonsense'
+
 
 
 
 
 export const schemaTypes = [blockContent, credit, heroSection]
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blockContent, credit, heroSection, contact],
+  types: [blockContent, credit, heroSection, contact, nonsense],
 }
