@@ -12,7 +12,7 @@ const Nonsense = ({ nonsense }) => {
         <>
             <div id="nonsense">
                 NONSENSE
-                <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+                <div className="flex flex-col md:flex-row gap-3 md:gap-6 items-stretch">
                     {nonsense.map((item, index) => (
                         <div key={index} className="flex flex-col gap-3">
                             <h3>{item.title}</h3>
