@@ -10,6 +10,12 @@ html {
 
 }
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 #contact, #nonsense, #credits { 
     scroll-margin-top: 100px; 
  }
+

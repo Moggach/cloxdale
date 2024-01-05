@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Header />
-            <div className="p-4 flex flex-col gap-8">{children} </div> 
+            <main className="p-4 flex flex-col gap-8">{children} </main> 
             <Footer />
 
         </>
