@@ -6,6 +6,7 @@ import { urlForImage } from '~/lib/sanity.image';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const Nonsense = ({ nonsense }) => {
+    console.log(nonsense);
 
     return (
         <>
@@ -16,8 +17,16 @@ const Nonsense = ({ nonsense }) => {
                         <div key={index} className="flex flex-col gap-3">
                             <h3>{item.title}</h3>
                             {item.videoLink && (
-                                <ReactPlayer url={item.videoLink} />
+                            <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' /* 16:9 aspect ratio */ }}>
+                                <ReactPlayer
+                                    url={item.videoLink}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ position: 'absolute', top: 0, left: 0 }}
+                                />
+                            </div>
                             )}
+
                             {item.image && (
                                 <Image
                                     className=""
@@ -30,7 +39,8 @@ const Nonsense = ({ nonsense }) => {
                             {item.excerpt && (
                                 <p>{item.excerpt[0].children[0].text}</p>
                             )}
-                        </div>
+                            </div>
+                      
                     ))}
                 </div>
             </div>
