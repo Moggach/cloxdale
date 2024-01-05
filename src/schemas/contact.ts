@@ -15,6 +15,12 @@ export default defineType({
       title: 'Link',
       type: 'string',
     }),
+    defineField(
+    {
+      title: 'noContact',
+      name: 'nocontact',
+      type: 'boolean'
+    })
   
   ]
 })

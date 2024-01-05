@@ -45,6 +45,8 @@ export type Credit = {
   title: string;
   name: string;
   link: string;
+  noContact: boolean;
+
  };
 
 
