@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const Credits = ({ credit }) => {
     return (
         <div id="credits">
+            CREDITS
             <Swiper
                 spaceBetween={20}
                 slidesPerView={2}
