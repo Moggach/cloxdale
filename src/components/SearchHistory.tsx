@@ -7,7 +7,7 @@ const SearchHistory = () => {
     return (
         <>
             <h2 className="text-2xl font-bold mb-4">
-                CHECK OUT CAMERON'S LIVE INTERNET SEARCH HISTORY
+                CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY
             </h2>
             <NewsTicker
                 speed={2000} autoStart={true}>
