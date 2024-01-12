@@ -11,6 +11,8 @@ import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
 import Nonsense from '~/components/Nonsense'
+import SearchHistory from '~/components/SearchHistory'
+
 
 
 
@@ -60,6 +62,8 @@ export default function IndexPage(
         <Contacts contacts={contacts} />
         <Credits credit={credits} />
         <Nonsense nonsense={nonsense} />
+        <SearchHistory/>
+
       </Layout>
     </>
   )
