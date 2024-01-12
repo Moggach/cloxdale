@@ -5,6 +5,8 @@ import credit from './credit'
 import heroSection from './heroSection'
 import contact from './contact'
 import nonsense from './nonsense'
+import searchItem from './searchItem'
+
 
 
 
@@ -12,5 +14,5 @@ import nonsense from './nonsense'
 
 export const schemaTypes = [blockContent, credit, heroSection]
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blockContent, credit, heroSection, contact, nonsense],
+  types: [blockContent, credit, heroSection, contact, nonsense, searchItem],
 }

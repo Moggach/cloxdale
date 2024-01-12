@@ -50,6 +50,12 @@ export type Credit = {
  };
 
 
+ export type searchItem = {
+  _id: string;
+  text: string;
+
+ };
+
 
  export type heroSection = {
   _id: string;

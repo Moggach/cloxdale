@@ -7,6 +7,7 @@ import type { heroSection } from '~/lib/sanity.queries'
 import type { Credit } from '~/lib/sanity.queries'
 import type { Contact } from '~/lib/sanity.queries'
 import type { nonsense } from '~/lib/sanity.queries'
+import type { searchItem } from '~/lib/sanity.queries'
 import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
@@ -23,6 +24,7 @@ export const getStaticProps: GetStaticProps<
     credits: Credit[]
     contacts: Contact[]
     nonsense: nonsense[]
+    searchItem: searchItem[]
   }
 
 > = async ({ draftMode = false }) => {
@@ -31,6 +33,8 @@ export const getStaticProps: GetStaticProps<
   const credits = await client.fetch(`*[_type == "credit"]`)
   const contacts = await client.fetch(`*[_type == "contact"]`)
   const nonsense = await client.fetch(`*[_type == "nonsense"]`)
+  const searchItem = await client.fetch(`*[_type == "searchItem"]`)
+
 
   return {
     props: {
@@ -39,7 +43,8 @@ export const getStaticProps: GetStaticProps<
       section,
       credits,
       contacts,
-      nonsense
+      nonsense,
+      searchItem
 
     },
   }
@@ -52,6 +57,8 @@ export default function IndexPage(
   const credits = props.credits
   const contacts = props.contacts
   const nonsense = props.nonsense
+  const searchItem = props.searchItem
+
 
 
 
@@ -62,7 +69,7 @@ export default function IndexPage(
         <Contacts contacts={contacts} />
         <Credits credit={credits} />
         <Nonsense nonsense={nonsense} />
-        <SearchHistory/>
+        <SearchHistory searchItem={searchItem} />
 
       </Layout>
     </>

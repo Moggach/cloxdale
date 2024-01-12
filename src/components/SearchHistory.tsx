@@ -1,20 +1,19 @@
 import NewsTicker from "react-advanced-news-ticker";
 
 
-const SearchHistory = () => {
-
+const SearchHistory = ({ searchItem }) => {
+    console.log(searchItem)
 
     return (
         <>
-            <h2 className="text-2xl font-bold mb-4">
+        
+            <h3>
                 CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY
-            </h2>
+            </h3>
             <NewsTicker
-                speed={2000} autoStart={true}>
-                <div>Etiam imperdiet volutpat libero eu tristique.</div>
-                <div>Curabitur porttitor ante eget hendrerit adipiscing.</div>
-                <div>Praesent ornare nisl lorem, ut condimentum lectus gravida ut.</div>
-                <div>Nunc ultrices tortor eu massa placerat posuere.</div>
+                speed={2000} autoStart={true}>   {searchItem.map((item, index) => (
+                    <div key={index}>{item.text}</div>
+                  ))}
             </NewsTicker>
         </>
     );
