@@ -60,7 +60,6 @@ body {
 }
 
 
-
 .fixed-height {
   height: 50px;
   overflow: hidden;
@@ -76,3 +75,4 @@ body {
   display: block;
   font-size: 12px;
 }
+
