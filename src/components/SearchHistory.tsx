@@ -7,7 +7,7 @@ const variants = {
     opacity: 1,
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 1.5, 
+      staggerChildren: 1.5,
     },
   },
 };
@@ -31,21 +31,23 @@ const SearchHistory = ({ searchItem }) => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5, 
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const currentContainerRef = containerRef.current;
+
+    if (currentContainerRef) {
+      observer.observe(currentContainerRef);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (currentContainerRef) {
+        observer.unobserve(currentContainerRef);
       }
     };
-  }, []);
+  }, [containerRef]); 
 
   return (
     <div ref={containerRef}>
