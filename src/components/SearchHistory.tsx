@@ -47,11 +47,11 @@ const SearchHistory = ({ searchItem }) => {
         observer.unobserve(currentContainerRef);
       }
     };
-  }, [containerRef]); 
+  }, [containerRef]);
 
   return (
     <div ref={containerRef}>
-      <h3>CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY</h3>
+      <h2 className="font-gogh text-2xl">CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
       <motion.ul
         initial="hidden"
         animate={isVisible ? 'visible' : 'hidden'}

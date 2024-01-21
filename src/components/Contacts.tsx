@@ -7,7 +7,7 @@ const Contacts = ({ contacts }) => {
     <div id="contact" className="flex flex-col gap-3 md:flex-row md:gap-5">
       {/* Contacts with nocontact true */}
       <div className="flex flex-col gap-3 basis-1/2">
-        CONTACT
+      <h2 className="font-gogh text-2xl">  CONTACT</h2>
 
         {otherContactsArray.map((contact, index) => (
           <div key={index}>
@@ -18,7 +18,7 @@ const Contacts = ({ contacts }) => {
 
       {/* Contacts with nocontact false */}
       <div className="flex flex-col gap-3 basis-1/2">
-        WAYS NOT TO CONTACT ME FOR BALANCE
+      <h2 className="font-gogh text-2xl">     WAYS NOT TO CONTACT ME FOR BALANCE</h2>
 
         {noContactArray.map((contact, index) => (
           <div key={index}>

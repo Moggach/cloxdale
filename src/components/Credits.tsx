@@ -20,7 +20,7 @@ import 'swiper/css/scrollbar';
 const Credits = ({ credit }) => {
     return (
         <div id="credits">
-            CREDITS
+           <h2 className="font-gogh text-2xl">CREDITS</h2> 
             <Swiper
             className="netflix-slider"
               modules={[Pagination, Scrollbar, A11y]}

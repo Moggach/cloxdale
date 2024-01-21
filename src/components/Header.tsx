@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <div>
         <Link href="#top">
-          <div className="text-lg font-bold">CAMERON LOXDALE</div>
+          <h1 className="font-gogh text-3xl">CAMERON LOXDALE</h1>
         </Link>
         <p>Comedy Writer</p>
       </div>

@@ -6,12 +6,11 @@ import { urlForImage } from '~/lib/sanity.image';
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const Nonsense = ({ nonsense }) => {
-    console.log(nonsense);
 
     return (
         <>
             <div id="nonsense">
-                NONSENSE
+               <h2 className="font-gogh text-2xl">NONSENSE</h2> 
                 <div className="flex flex-col md:flex-row gap-3 md:gap-6 items-stretch">
                     {nonsense.map((item, index) => (
                         <div key={index} className="flex flex-col gap-3">
