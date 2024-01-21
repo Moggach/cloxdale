@@ -4,9 +4,9 @@ const Contacts = ({ contacts }) => {
   const otherContactsArray = contacts.filter(contact => !contact.nocontact);
 
   return (
-    <div id="contact" className="flex flex-col gap-3 md:flex-row md:gap-5">
+    <div id="contact" className="flex flex-col gap-40 md:flex-row md:gap-60">
       {/* Contacts with nocontact true */}
-      <div className="flex flex-col gap-3 basis-1/2">
+      <div className="flex flex-col gap-20 basis-1/2">
       <h2 className="font-gogh text-2xl">  CONTACT</h2>
 
         {otherContactsArray.map((contact, index) => (
@@ -17,7 +17,7 @@ const Contacts = ({ contacts }) => {
       </div>
 
       {/* Contacts with nocontact false */}
-      <div className="flex flex-col gap-3 basis-1/2">
+      <div className="flex flex-col gap-20 basis-1/2">
       <h2 className="font-gogh text-2xl">     WAYS NOT TO CONTACT ME FOR BALANCE</h2>
 
         {noContactArray.map((contact, index) => (

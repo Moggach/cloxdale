@@ -51,8 +51,9 @@ const SearchHistory = ({ searchItem }) => {
 
   return (
     <div ref={containerRef}>
-      <h2 className="font-gogh text-2xl">CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
+      <h2 className="font-gogh text-2xl mb-20">CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
       <motion.ul
+        className="flex flex-col gap-20"
         initial="hidden"
         animate={isVisible ? 'visible' : 'hidden'}
         variants={variants}
