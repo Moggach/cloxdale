@@ -85,4 +85,5 @@ main {
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid gray;
+  z-index: 10;
 }
