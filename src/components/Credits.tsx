@@ -30,7 +30,7 @@ const Credits = ({ credit }) => {
         <div ref={sectionRef} id="credits">
                         <h2 className="font-gogh text-2xl">CREDITS</h2>
             <Swiper
-                className="netflix-slider"
+                className="credits-slider"
                 modules={[Pagination, Scrollbar, A11y]}
                 spaceBetween={30}
                 slidesPerView={2.5}

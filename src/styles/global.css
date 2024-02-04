@@ -35,22 +35,22 @@ main {
 }
 
 
-.netflix-slider .swiper-wrapper {
+.credits-slider .swiper-wrapper {
   padding: 20px 0;
 }
 
-.netflix-slider .swiper-slide {
+.credits-slider .swiper-slide {
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
 
-.netflix-slider .swiper-slide:hover {
+.credits-slider .swiper-slide:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   z-index: 1;
 }
 
-.netflix-slider .swiper-slide:first-of-type:hover .excerpt {
+.credits-slider .swiper-slide:first-of-type:hover .excerpt {
   padding-left: 20px;
 }
 
@@ -66,7 +66,7 @@ main {
   display: none;
 }
 
-.netflix-slider .swiper-slide:hover .excerpt {
+.credits-slider .swiper-slide:hover .excerpt {
   display: block;
   font-size: 12px;
 }
