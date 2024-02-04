@@ -15,7 +15,7 @@ const Nonsense = ({ nonsense }) => {
             registerSection("nonsense", sectionRef);
         }
     
-    }, []);
+    }, [registerSection]);
 
     return (
         <>
