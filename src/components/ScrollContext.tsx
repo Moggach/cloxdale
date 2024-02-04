@@ -17,12 +17,10 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const registerSection = (id: string, ref: MutableRefObject<HTMLElement | null>) => {
     const normalizedId = id.replace(/^#/, '');
     sectionRefs.current[normalizedId] = ref;
-    console.log(`Ref being registered for ${normalizedId}`, ref);
   };
   
   const getSectionRef = (id: string) => {
     const normalizedId = id.replace(/^#/, '');
-    console.log("Getting section ref for:", normalizedId, sectionRefs.current[normalizedId]);
     return sectionRefs.current[normalizedId];
   };
   
