@@ -13,6 +13,8 @@ import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
 import Nonsense from '~/components/Nonsense'
 import SearchHistory from '~/components/SearchHistory'
+import { ScrollProvider } from '~/components/ScrollContext';
+
 
 
 
@@ -64,6 +66,8 @@ export default function IndexPage(
 
   return (
     <>
+        <ScrollProvider>
+
       <Layout>
         <HeroSection section={section} />
         <Contacts contacts={contacts} />
@@ -72,6 +76,8 @@ export default function IndexPage(
         <SearchHistory searchItem={searchItem} />
 
       </Layout>
+      </ScrollProvider>
+
     </>
   )
 }

@@ -22,12 +22,6 @@ main {
   margin: 0 auto;
 }
 
-#contact,
-#nonsense,
-#credits {
-  scroll-margin-top: 100px;
-}
-
 
 
 .swiper-container {

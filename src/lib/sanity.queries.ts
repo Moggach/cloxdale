@@ -28,7 +28,7 @@ export type Credit = {
   slug: {
     current: string;
   };
-  excerpt: string;
+  excerpt:  { children: { text: string }[] }[];
   image: {
     asset: {
       url: string;

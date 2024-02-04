@@ -1,15 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { urlForImage } from '~/lib/sanity.image';
-import Link from 'next/link';
+import { useScroll } from './ScrollContext';
 
+import { useEffect, useRef } from 'react';
 
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -18,9 +16,19 @@ import 'swiper/css/scrollbar';
 
 
 const Credits = ({ credit }) => {
+    const sectionRef = useRef<HTMLDivElement>(null); // Create a ref for the section
+    const { registerSection } = useScroll();
+
+    useEffect(() => {
+        if (sectionRef.current) {
+            registerSection("credits", sectionRef);
+        }
+    
+    }, []);
+
     return (
-        <div id="credits">
-            <h2 className="font-gogh text-2xl">CREDITS</h2>
+        <div ref={sectionRef} id="credits">
+                        <h2 className="font-gogh text-2xl">CREDITS</h2>
             <Swiper
                 className="netflix-slider"
                 modules={[Pagination, Scrollbar, A11y]}

@@ -1,51 +1,29 @@
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import SmoothScrollLink from './SmoothScrollLink';
 
 const Navbar = () => {
-  const [isSticky, setSticky] = useState(false);
-  const navbarRef = React.createRef<HTMLDivElement>();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (navbarRef.current) {
-        setSticky(window.pageYOffset >= navbarRef.current.offsetTop);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [navbarRef]);
 
   return (
     <nav
-      ref={navbarRef}
-      className="z-10 bg-gray-100 h-[100px] sticky top-0 p-4 flex flex-col md:flex-row justify-between md:items-center "
+
+      className="z-10 bg-gray-100 h-[100px] sticky top-0 p-4 flex flex-col md:flex-row justify-between md:items-center"
     >
       <div>
-        <Link href="#top">
-          <h1 className="font-gogh text-3xl">CAMERON LOXDALE</h1>
-        </Link>
+
+        <h1 className="font-gogh text-3xl cursor-pointer">
+          <SmoothScrollLink toTop={true}>CAMERON LOXDALE</SmoothScrollLink>
+        </h1>
         <p>Comedy Writer</p>
       </div>
 
       <ul className="flex space-x-4">
         <li>
-          <Link href="#contact">
-            <div>Contact</div>
-          </Link>
+          <SmoothScrollLink to="#contacts" offset={100}>Contact</SmoothScrollLink>
         </li>
         <li>
-          <Link href="#credits">
-            <div>Credits</div>
-          </Link>
+          <SmoothScrollLink to="#credits" offset={100}>Credits</SmoothScrollLink>
         </li>
         <li>
-          <Link href="#nonsense">
-            <div>Nonsense</div>
-          </Link>
+          <SmoothScrollLink to="#nonsense" offset={100}>Nonsense</SmoothScrollLink>
         </li>
       </ul>
     </nav>
