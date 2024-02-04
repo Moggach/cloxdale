@@ -19,12 +19,12 @@ const Nonsense = ({ nonsense }) => {
 
     return (
         <>
-            <div ref={sectionRef} id="nonsense">      
+            <div ref={sectionRef} id="nonsense" className="flex flex-col gap-20">      
             <h2 className="font-gogh text-2xl">NONSENSE</h2>
-                <div className="flex flex-col md:flex-row gap-3 md:gap-6 items-stretch">
+                <div className="flex flex-col md:flex-row gap-20 items-stretch font-karla">
                     {nonsense.map((item, index) => (
-                        <div key={index} className="flex flex-col gap-3">
-                            <h3>{item.title}</h3>
+                        <div key={index} className="flex flex-col gap-20">
+                            <h3 className='text-lg'>{item.title}</h3>
                             {item.videoLink && (
                                 <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' /* 16:9 aspect ratio */ }}>
                                     <ReactPlayer
@@ -46,7 +46,7 @@ const Nonsense = ({ nonsense }) => {
                                 />
                             )}
                             {item.excerpt && (
-                                <p>{item.excerpt[0].children[0].text}</p>
+                                <p className="text-base">{item.excerpt[0].children[0].text}</p>
                             )}
                         </div>
 

@@ -26,7 +26,7 @@ export default function Layout({ children }) {
                 {isExploding && <ConfettiExplosion force={0.8} duration={3000} particleCount={250} width={2000} />}
                 {showModal && <Modal onClose={handleCloseModal} />}
             </div>
-            <main className="pt-4 px-4 mx:py-0 flex flex-col gap-60 md:gap-80">{children}</main>
+            <main className="px-4 mx:py-0 flex flex-col gap-60 md:gap-80 mb-60">{children}</main>
             <Footer />
         </>
     )

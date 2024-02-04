@@ -3,7 +3,7 @@ import { urlForImage } from '~/lib/sanity.image'
 
 const HeroSection = ({ section }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-3 md:gap-5">
+    <div className="flex flex-col md:flex-row gap-3 md:gap-5 font-karla text-base">
       <div className="basis-1/2">
         {section[0].body.map((block) => (
           <div key={block._key} style={{ margin: '10px 0' }}>

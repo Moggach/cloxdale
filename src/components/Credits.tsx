@@ -23,12 +23,12 @@ const Credits = ({ credit }) => {
         if (sectionRef.current) {
             registerSection("credits", sectionRef);
         }
-    
+
     }, [registerSection]);
 
     return (
         <div ref={sectionRef} id="credits">
-                        <h2 className="font-gogh text-2xl">CREDITS</h2>
+            <h2 className="font-gogh text-2xl">CREDITS</h2>
             <Swiper
                 className="credits-slider"
                 modules={[Pagination, Scrollbar, A11y]}
@@ -62,7 +62,7 @@ const Credits = ({ credit }) => {
                             {credit.excerpt.map((block) => (
                                 <div className="excerpt" key={block._key} style={{ margin: '10px 0' }}>
                                     {block.children.map((child) => (
-                                        <span key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
+                                        <span className="font-karla text-sm"key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
                                             {child.text}
                                         </span>
                                     ))}

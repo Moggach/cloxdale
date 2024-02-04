@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useScroll } from './ScrollContext';
 
 const Contacts = ({ contacts }) => {
-  const sectionRef = useRef<HTMLDivElement>(null); // Create a ref for the section
+  const sectionRef = useRef<HTMLDivElement>(null); 
   const { registerSection } = useScroll();
 
   useEffect(() => {
@@ -25,18 +25,18 @@ const Contacts = ({ contacts }) => {
 
         {otherContactsArray.map((contact, index) => (
           <div key={index}>
-            <h3>{contact.title} <a href={contact.link}>here</a></h3>
+            <div className="font-karla text-base">{contact.title} <a href={contact.link}>here</a></div>
           </div>
         ))}
       </div>
 
       {/* Contacts with nocontact false */}
       <div className="flex flex-col gap-20 basis-1/2">
-        <h2 className="font-gogh text-2xl">     WAYS NOT TO CONTACT ME FOR BALANCE</h2>
+        <h2 className="font-gogh text-2xl">  WAYS NOT TO CONTACT ME FOR BALANCE</h2>
 
         {noContactArray.map((contact, index) => (
           <div key={index}>
-            <h3>{contact.title} <a href={contact.link}>here</a></h3>
+            <div className="font-karla text-base"><a href={contact.link}>here</a></div>
           </div>
         ))}
       </div>

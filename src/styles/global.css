@@ -4,10 +4,20 @@
 
 @font-face {
   font-family: 'Gogh';
-  src: url('../fonts/Gogh-ExtraBold.woff2') format('woff2');
+  src: url('../fonts/Gogh/Gogh-ExtraBold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla/static/Karla-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 html {
   scroll-behavior: smooth;
@@ -36,7 +46,7 @@ main {
 
 
 .credits-slider .swiper-wrapper {
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .credits-slider .swiper-slide {

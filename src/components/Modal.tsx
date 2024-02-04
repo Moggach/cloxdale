@@ -1,6 +1,6 @@
 const Modal = ({ onClose }) => {
   return (
-   <div className="p-4 z-10">
+   <div className="p-4 font-karla text-base">
      Congratulations on being the millionth visitor to my website 🎉
      <button onClick={onClose}>Close</button>
    </div>
