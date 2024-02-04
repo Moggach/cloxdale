@@ -11,7 +11,7 @@ const Contacts = ({ contacts }) => {
       registerSection("contacts", sectionRef);
     }
 
-  }, []);
+  }, [registerSection]);
 
   // Separate contacts based on the 'nocontact' property
   const noContactArray = contacts.filter(contact => contact.nocontact);

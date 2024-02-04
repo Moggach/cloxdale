@@ -24,7 +24,7 @@ const Credits = ({ credit }) => {
             registerSection("credits", sectionRef);
         }
     
-    }, []);
+    }, [registerSection]);
 
     return (
         <div ref={sectionRef} id="credits">
