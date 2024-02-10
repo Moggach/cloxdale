@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         gogh: ['Gogh', 'sans'], 
-        karla: ['Karla', 'sans'], 
+        merriweather: ['Merriweather', 'sans-serif'], 
       },
       spacing: {
         '20': '20px',
@@ -16,7 +16,7 @@ module.exports = {
         '80': '80px',
         '120': '120px',
       },
-      gap: (theme) => theme('spacing'), // Use custom spacing values for flex gap
+      gap: (theme) => theme('spacing'), 
       fontSize: {
         'xs': '.75rem',     // 12px
         'sm': '.875rem',    // 14px

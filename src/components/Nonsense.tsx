@@ -21,7 +21,7 @@ const Nonsense = ({ nonsense }) => {
         <>
             <div ref={sectionRef} id="nonsense" className="flex flex-col gap-20">      
             <h2 className="font-gogh text-2xl">NONSENSE</h2>
-                <div className="flex flex-col md:flex-row gap-20 items-stretch font-karla">
+                <div className="flex flex-col md:flex-row gap-20 items-stretch font-merriweather">
                     {nonsense.map((item, index) => (
                         <div key={index} className="flex flex-col gap-20">
                             <h3 className='text-lg'>{item.title}</h3>

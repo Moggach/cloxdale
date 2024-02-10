@@ -1,7 +1,7 @@
 export default function Footer() {
 
   return (
-    <footer className="p-4 flex flex-row justify-between font-karla  text-base">
+    <footer className="p-4 flex flex-row justify-between font-merriweather  text-base">
       &copy; Cameron Loxdale 2024
       <div className="flex flex-row gap-2">
         <a href="https://bsky.app/profile/cloxdale.bsky.social">
