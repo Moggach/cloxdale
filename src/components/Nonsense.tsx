@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { urlForImage } from '~/lib/sanity.image';
 import { useScroll } from './ScrollContext';
+import Dots from './Dots'
 
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -19,9 +20,9 @@ const Nonsense = ({ nonsense }) => {
 
     return (
         <>
-            <div ref={sectionRef} id="nonsense" className="flex flex-col gap-20">      
-            <h2 className="font-gogh text-2xl">NONSENSE</h2>
-                <div className="flex flex-col md:flex-row gap-20 items-stretch font-merriweather">
+            <div ref={sectionRef} id="nonsense" className="flex flex-col gap-20 ">      
+            <h2 className="font-gogh text-lg bg-neonGreen p-3 w-content inline-block rounded-sm rotate-3">NONSENSE</h2>
+                <div className="flex flex-col md:flex-row gap-20 items-stretch font-merriweather text-base">
                     {nonsense.map((item, index) => (
                         <div key={index} className="flex flex-col gap-20">
                             <h3 className='text-lg'>{item.title}</h3>
@@ -46,13 +47,14 @@ const Nonsense = ({ nonsense }) => {
                                 />
                             )}
                             {item.excerpt && (
-                                <p className="text-base">{item.excerpt[0].children[0].text}</p>
+                                <p className="">{item.excerpt[0].children[0].text}</p>
                             )}
                         </div>
 
                     ))}
                 </div>
             </div>
+            <Dots/>
         </>
     );
 };

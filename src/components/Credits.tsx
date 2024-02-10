@@ -12,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Dots from './Dots'
 
 
 
@@ -27,24 +28,25 @@ const Credits = ({ credit }) => {
     }, [registerSection]);
 
     return (
-        <div ref={sectionRef} id="credits">
-            <h2 className="font-gogh text-2xl">CREDITS</h2>
+        <>
+        <div ref={sectionRef} id="credits" className=''>
+            <h2 className="font-gogh text-lg bg-neonGreen p-3 w-content rounded-sm -rotate-3 inline-block">CREDITS</h2>
             <Swiper
                 className="credits-slider"
                 modules={[Pagination, Scrollbar, A11y]}
                 spaceBetween={30}
-                slidesPerView={2.5}
+                slidesPerView={1.5}
                 breakpoints={{
                     768: {
-                        slidesPerView: 3,
+                        slidesPerView: 2.5,
                         spaceBetween: 30
                     },
                     1024: {
-                        slidesPerView: 3.5,
+                        slidesPerView: 3,
                         spaceBetween: 30
                     },
                     1200: {
-                        slidesPerView: 4.5,
+                        slidesPerView: 3.5,
                         spaceBetween: 30
                     }
                 }}
@@ -74,6 +76,8 @@ const Credits = ({ credit }) => {
                 ))}
             </Swiper>
         </div>
+        <Dots/>
+        </>
     );
 }
 

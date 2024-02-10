@@ -1,7 +1,6 @@
 
 import Footer from '~/components/Footer'
 import Header from '~/components/Header'
-
 import Modal from '~/components/Modal';
 import dynamic from 'next/dynamic';
 
@@ -22,11 +21,11 @@ export default function Layout({ children }) {
         <>
             {showModal && <div className="overlay"></div>} 
             <Header />
-            <div className={`flex justify-center ${showModal ? 'modal' : ''}`}>
+            {/* <div className={`flex justify-center ${showModal ? 'modal' : ''}`}>
                 {isExploding && <ConfettiExplosion force={0.8} duration={3000} particleCount={250} width={2000} />}
                 {showModal && <Modal onClose={handleCloseModal} />}
-            </div>
-            <main className="px-4 mx:py-0 flex flex-col gap-60 md:gap-80 mb-60">{children}</main>
+            </div> */}
+            <main className="px-20 flex flex-col gap-60 md:gap-80 mb-60">{children}</main>
             <Footer />
         </>
     )

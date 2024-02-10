@@ -1,29 +1,43 @@
+import React, { useState, useEffect, useRef } from 'react';
 import SmoothScrollLink from './SmoothScrollLink';
 
 const Navbar = () => {
+  const [offset, setOffset] = useState(170); 
+  const navbarRef = useRef(null);
+  useEffect(() => {
+    const updateOffset = () => {
+      if (navbarRef.current) {
+        const navbarHeight = navbarRef.current.offsetHeight;
+        setOffset(navbarHeight + 20); 
+      }
+    };
 
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
+
+    return () => window.removeEventListener('resize', updateOffset);
+  }, []); 
   return (
     <nav
-
-      className="z-10 bg-white sticky top-0 p-4 flex gap-20 flex-col md:flex-row justify-between md:items-center"
+      ref={navbarRef} 
+      className="z-10 bg-neonGreen sticky top-0 p-20 lg:px-60 flex gap-20 flex-col md:flex-row justify-between md:items-center mb-60"
     >
-      <div>
-
-        <h1 className="font-gogh text-4xl cursor-pointer">
+      <div className="flex gap-20 flex-col">
+        <h1 className="font-gogh text-xl cursor-pointer">
           <SmoothScrollLink toTop={true}>CAMERON LOXDALE</SmoothScrollLink>
         </h1>
-        <p className="font-gogh text-2xl" >Comedy Writer</p>
+        <p className="font-gogh text-lg">Comedy Writer</p>
       </div>
 
-      <ul className="flex flex-wrap space-x-4 font-gogh text-lg uppercase">
+      <ul className="flex flex-wrap font-gogh gap-x-[10px] uppercase text-lg">
         <li>
-          <SmoothScrollLink to="#contacts" offset={170}>Contact</SmoothScrollLink>
+          <SmoothScrollLink to="#contacts" offset={offset}>Contact</SmoothScrollLink>
         </li>
         <li>
-          <SmoothScrollLink to="#credits" offset={170}>Credits</SmoothScrollLink>
+          <SmoothScrollLink to="#credits" offset={offset}>Credits</SmoothScrollLink>
         </li>
         <li>
-          <SmoothScrollLink to="#nonsense" offset={170}>Nonsense</SmoothScrollLink>
+          <SmoothScrollLink to="#nonsense" offset={offset}>Nonsense</SmoothScrollLink>
         </li>
       </ul>
     </nav>

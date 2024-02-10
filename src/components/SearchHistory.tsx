@@ -50,8 +50,8 @@ const SearchHistory = ({ searchItem }) => {
   }, [containerRef]);
 
   return (
-    <div ref={containerRef}>
-      <h2 className="font-gogh text-2xl mb-20">CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
+    <div ref={containerRef} className="">
+      <h2 className="font-gogh text-lg mb-[30px] bg-neonGreen p-3 rounded-sm -rotate-3 inline-block">CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
       <motion.ul
         className="flex flex-col gap-20"
         initial="hidden"
