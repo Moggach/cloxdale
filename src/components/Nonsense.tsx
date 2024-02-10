@@ -15,14 +15,14 @@ const Nonsense = ({ nonsense }) => {
         if (sectionRef.current) {
             registerSection("nonsense", sectionRef);
         }
-    
+
     }, [registerSection]);
 
     return (
         <>
-            <div ref={sectionRef} id="nonsense" className="flex flex-col gap-20 ">      
-            <h2 className="font-gogh text-lg bg-neonGreen p-3 w-content inline-block rounded-sm rotate-3">NONSENSE</h2>
-                <div className="flex flex-col md:flex-row gap-20 items-stretch font-merriweather text-base">
+            <div ref={sectionRef} id="nonsense" className="flex flex-col gap-20 ">
+                <h2 className="font-gogh text-lg bg-neonGreen p-3 w-content inline-block rounded-sm rotate-3">NONSENSE</h2>
+                <div className="flex flex-col md:grid md:grid-cols-2 md:gap-20 items-stretch font-merriweather text-base">
                     {nonsense.map((item, index) => (
                         <div key={index} className="flex flex-col gap-20">
                             <h3 className='text-lg'>{item.title}</h3>
@@ -54,7 +54,7 @@ const Nonsense = ({ nonsense }) => {
                     ))}
                 </div>
             </div>
-            <Dots/>
+            <Dots />
         </>
     );
 };
