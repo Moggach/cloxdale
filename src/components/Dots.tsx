@@ -2,7 +2,7 @@
 const Dots = () => {
     return(
 
-    <div className="dots-container">
+    <div className="flex items-center justify-around">
         <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>

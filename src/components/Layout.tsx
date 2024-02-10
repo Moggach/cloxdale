@@ -21,10 +21,10 @@ export default function Layout({ children }) {
         <>
             {showModal && <div className="overlay"></div>} 
             <Header />
-            {/* <div className={`flex justify-center ${showModal ? 'modal' : ''}`}>
+            <div className={`flex justify-center w-3/4 md:w-auto ${showModal ? 'modal' : ''}`}>
                 {isExploding && <ConfettiExplosion force={0.8} duration={3000} particleCount={250} width={2000} />}
                 {showModal && <Modal onClose={handleCloseModal} />}
-            </div> */}
+            </div>
             <main className="px-20 flex flex-col gap-60 md:gap-80 mb-60">{children}</main>
             <Footer />
         </>
