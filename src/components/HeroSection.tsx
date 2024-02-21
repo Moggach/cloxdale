@@ -6,7 +6,7 @@ import Dots from './Dots'
 const HeroSection = ({ section }) => {
   return (
     <>
-    <div className="flex flex-col md:flex-row gap-20 font-merriweather text-base ">
+    <div className="flex flex-col md:flex-row gap-20 font-roboto  text-base ">
       <div className="basis-1/2">
         {section[0].body.map((block) => (
           <div key={block._key} style={{ margin: '10px 0' }}>

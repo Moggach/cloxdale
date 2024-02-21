@@ -28,7 +28,7 @@ const Contacts = ({ contacts }) => {
 
           {otherContactsArray.map((contact, index) => (
             <div key={index}>
-              <div className="font-merriweather text-base">{contact.title} <a href={contact.link}>here</a></div>
+              <div className="font-roboto  text-base">{contact.title} <a href={contact.link}>here</a></div>
             </div>
           ))}
         </div>
@@ -39,7 +39,7 @@ const Contacts = ({ contacts }) => {
 
           {noContactArray.map((contact, index) => (
             <div key={index}>
-              <div className="font-merriweather text-base"><a href={contact.link}>here</a></div>
+              <div className="font-roboto  text-base"><a href={contact.link}>here</a></div>
             </div>
           ))}
         </div>

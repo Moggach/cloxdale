@@ -64,7 +64,7 @@ const Credits = ({ credit }) => {
                             {credit.excerpt.map((block) => (
                                 <div className="excerpt" key={block._key} style={{ margin: '10px 0' }}>
                                     {block.children.map((child) => (
-                                        <span className="font-merriweather text-sm"key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
+                                        <span className="font-roboto  text-sm"key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
                                             {child.text}
                                         </span>
                                     ))}

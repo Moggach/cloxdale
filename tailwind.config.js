@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         gogh: ['Gogh', 'sans'], 
-        merriweather: ['Merriweather', 'sans-serif'], 
+        roboto: ['Roboto', 'sans-serif'], 
       },
       spacing: {
         '20': '20px',
