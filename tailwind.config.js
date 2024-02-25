@@ -18,7 +18,7 @@ module.exports = {
       },
       gap: (theme) => theme('spacing'), 
       fontSize: {
-        'base': '16px',    
+        'base': '18px',    
         'lg': '24px',   
         'xl': '32px',   
         '2xl': '48px',   
