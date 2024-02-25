@@ -62,9 +62,9 @@ const Navbar = () => {
           </svg>
           {isDropdownVisible && (
             <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Light</a>
-              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark</a>
-              <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Too dark</a>
+              <a href="#" className="block px-4 py-2 text-base">Light</a>
+              <a href="#" className="block px-4 py-2 text-base">Dark</a>
+              <a href="#" className="block px-4 py-2 text-base">Too dark</a>
             </div>
           )}
         </div>
