@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SmoothScrollLink from './SmoothScrollLink';
+import { useTheme } from '~/components/ThemeContext';
+
 
 const Navbar = () => {
   const [offset, setOffset] = useState(170);
@@ -20,10 +22,12 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', updateOffset);
   }, []);
 
-  // Function to toggle dropdown visibility
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
   };
+
+  const { setLightTheme, setDarkTheme } = useTheme();
+
 
   return (
     <nav
@@ -62,9 +66,9 @@ const Navbar = () => {
           </svg>
           {isDropdownVisible && (
             <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-              <a href="#" className="block px-4 py-2 text-base">Light</a>
-              <a href="#" className="block px-4 py-2 text-base">Dark</a>
-              <a href="#" className="block px-4 py-2 text-base">Too dark</a>
+              <button onClick={setLightTheme} className="block px-4 py-2 text-base uppercase">Light</button>
+              <button onClick={setDarkTheme} className="block px-4 py-2 text-base uppercase">Dark</button>
+              <button className="block px-4 py-2 text-base">Too dark</button>
             </div>
           )}
         </div>

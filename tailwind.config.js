@@ -26,6 +26,7 @@ module.exports = {
       },
       colors: {
         neonGreen: '#39ff14', 
+        darkGreen: '#5e675c'
       },
       width: {
         'content': 'max-content', // Add a custom width utility

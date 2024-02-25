@@ -1,7 +1,12 @@
+import { useTheme } from './ThemeContext';
+
 export default function Footer() {
+  const { theme } = useTheme();
+  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-neonGreen';
+  const textColor = theme === 'dark' ? 'text-white' : 'text-black';
 
   return (
-    <footer className="p-4 flex flex-col gap-20 md:flex-row md:justify-between p-20 lg:p-40 font-roboto  bg-neonGreen">
+    <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between p-20 lg:p-40 font-roboto ${bgColor} ${textColor}`}>
       &copy; Cameron Loxdale 2024
       <div className="flex flex-row gap-2">
         <a href="https://bsky.app/profile/cloxdale.bsky.social">
@@ -11,7 +16,7 @@ export default function Footer() {
         </a>
         <a href="https://twitter.com/Cloxdale">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 300 300.251" version="1.1">
-            
+
             <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66" />
           </svg>      </a>
         <a href="https://linktr.ee/cloxdale">
