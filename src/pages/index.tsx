@@ -14,6 +14,7 @@ import Contacts from '~/components/Contacts'
 import Nonsense from '~/components/Nonsense'
 import SearchHistory from '~/components/SearchHistory'
 import { ScrollProvider } from '~/components/ScrollContext';
+import { ThemeProvider } from '~/components/ThemeContext';
 
 
 
@@ -66,18 +67,22 @@ export default function IndexPage(
 
   return (
     <>
+      <ThemeProvider>
+
         <ScrollProvider>
 
-      <Layout>
-        <HeroSection section={section} />
-        <Contacts contacts={contacts} />
-        <Credits credit={credits} />
-        <Nonsense nonsense={nonsense} />
-        <SearchHistory searchItem={searchItem} />
+          <Layout>
+            <HeroSection section={section} />
+            <Contacts contacts={contacts} />
+            <Credits credit={credits} />
+            <Nonsense nonsense={nonsense} />
+            <SearchHistory searchItem={searchItem} />
 
-      </Layout>
-      </ScrollProvider>
+          </Layout>
+        </ScrollProvider>
+      </ThemeProvider>
 
     </>
+
   )
 }

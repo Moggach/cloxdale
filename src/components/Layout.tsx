@@ -3,7 +3,7 @@ import Footer from '~/components/Footer'
 import Header from '~/components/Header'
 import Modal from '~/components/Modal';
 import dynamic from 'next/dynamic';
-import { ThemeProvider } from '~/components/ThemeContext';
+import { useTheme } from '~/components/ThemeContext'; 
 
 
 const ConfettiExplosion = dynamic(() => import('react-confetti-explosion'), { ssr: false });
@@ -16,20 +16,23 @@ export default function Layout({ children }) {
     const handleCloseModal = () => {
         setShowModal(false);
     };
+    const { theme } = useTheme();
+    const mainClass = theme === 'dark' ? 'bg-darkBackground text-white' : 'bg-lightBackground';
+
 
     return (
         <>
-            <ThemeProvider>
 
                 {showModal && <div className="overlay"></div>}
                 <Header />
+                <div className={`${mainClass}`}>
                 <div className={`flex justify-center w-3/4 md:w-auto ${showModal ? 'modal' : ''}`}>
                     {isExploding && <ConfettiExplosion force={0.8} duration={3000} particleCount={250} width={2000} />}
                     {showModal && <Modal onClose={handleCloseModal} />}
                 </div>
-                <main className="px-20 flex flex-col gap-60 md:gap-80 mb-60">{children}</main>
+                <main className={`px-20 flex flex-col gap-60 md:gap-80 pb-60 pt-40 lg:pt-60 ${mainClass}`}>{children}</main>
+                </div>
                 <Footer />
-            </ThemeProvider>
 
         </>
     )

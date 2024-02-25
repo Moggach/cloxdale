@@ -29,10 +29,16 @@ const Navbar = () => {
   const { setLightTheme, setDarkTheme } = useTheme();
 
 
+  const { theme } = useTheme();
+  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
+  const buttonBgDark = theme === 'dark' ? 'bg-gray-200' : '';
+  const buttonBgLight = theme === 'light' ? 'bg-gray-200' : '';
+
+
   return (
     <nav
       ref={navbarRef}
-      className="z-10 bg-neonGreen sticky top-0 p-20 lg:px-60 flex gap-20 flex-col md:flex-row justify-between md:items-center mb-40 lg:mb-60"
+      className={`z-10 sticky top-0 p-20 lg:px-60 flex gap-20 flex-col md:flex-row justify-between md:items-center  ${bgColor}`}
     >
       <div className="flex gap-20 flex-col">
         <h1 className="font-gogh text-xl cursor-pointer hover:text-white">
@@ -66,9 +72,9 @@ const Navbar = () => {
           </svg>
           {isDropdownVisible && (
             <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-              <button onClick={setLightTheme} className="block px-4 py-2 text-base uppercase">Light</button>
-              <button onClick={setDarkTheme} className="block px-4 py-2 text-base uppercase">Dark</button>
-              <button className="block px-4 py-2 text-base">Too dark</button>
+              <button onClick={setLightTheme} className={` ${buttonBgLight} block px-4 py-2 text-base uppercase w-full text-left`}>Light</button>
+              <button onClick={setDarkTheme} className={` ${buttonBgDark} block px-4 py-2 text-base uppercase w-full text-left`}>Dark</button>
+              <button className="block px-4 py-2 text-base uppercase">Too dark</button>
             </div>
           )}
         </div>

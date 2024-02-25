@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from './ThemeContext';
 
 const variants = {
   hidden: { opacity: 0 },
@@ -49,9 +50,13 @@ const SearchHistory = ({ searchItem }) => {
     };
   }, [containerRef]);
 
+  const { theme } = useTheme();
+  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
+  const textColor = theme === 'dark' ? 'text-black' : 'text-white';
+
   return (
     <div ref={containerRef} className="">
-      <h2 className="font-gogh text-lg mb-[30px] bg-neonGreen p-3 rounded-sm -rotate-3 inline-block">CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
+      <h2 className={`font-gogh text-lg mb-[30px] p-3 rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}>CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
       <motion.ul
         className="flex flex-col gap-20"
         initial="hidden"

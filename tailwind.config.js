@@ -25,8 +25,9 @@ module.exports = {
         '3xl': '64px',
       },
       colors: {
-        neonGreen: '#39ff14', 
-        darkGreen: '#5e675c'
+        lightGreen: '#39ff14', 
+        darkGreen: '#acff92',
+        darkBackground: '#1b2618'
       },
       width: {
         'content': 'max-content', // Add a custom width utility

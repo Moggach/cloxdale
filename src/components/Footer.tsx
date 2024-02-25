@@ -2,11 +2,10 @@ import { useTheme } from './ThemeContext';
 
 export default function Footer() {
   const { theme } = useTheme();
-  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-neonGreen';
-  const textColor = theme === 'dark' ? 'text-white' : 'text-black';
+  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
 
   return (
-    <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between p-20 lg:p-40 font-roboto ${bgColor} ${textColor}`}>
+    <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between p-20 lg:p-40 font-roboto ${bgColor}`}>
       &copy; Cameron Loxdale 2024
       <div className="flex flex-row gap-2">
         <a href="https://bsky.app/profile/cloxdale.bsky.social">
