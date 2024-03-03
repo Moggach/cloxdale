@@ -2,7 +2,7 @@ import { useTheme } from './ThemeContext';
 
 export default function Footer() {
   const { theme } = useTheme();
-  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
+  const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
 
   return (
     <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between p-20 lg:p-40 font-roboto ${bgColor}`}>

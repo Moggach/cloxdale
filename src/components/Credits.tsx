@@ -24,8 +24,8 @@ const Credits = ({ credit }) => {
     }, [registerSection]);
 
     const { theme } = useTheme();
-    const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
-    const textColor = theme === 'dark' ? 'text-black' : 'text-white';
+    const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
+    const textColor = theme === 'dark' ? 'text-darkText' : 'text-lightText';
 
 
     return (

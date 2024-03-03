@@ -3,7 +3,7 @@ import { useTheme } from './ThemeContext';
 const Dots = () => {
 
     const { theme } = useTheme();
-    const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
+    const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
 
     return(
 

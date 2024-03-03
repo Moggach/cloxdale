@@ -30,7 +30,7 @@ const Navbar = () => {
 
 
   const { theme } = useTheme();
-  const bgColor = theme === 'dark' ? 'bg-darkGreen' : 'bg-lightGreen';
+  const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
   const buttonBgDark = theme === 'dark' ? 'bg-gray-200' : '';
   const buttonBgLight = theme === 'light' ? 'bg-gray-200' : '';
 
@@ -41,7 +41,7 @@ const Navbar = () => {
       className={`z-10 sticky top-0 p-20 lg:px-60 flex gap-20 flex-col md:flex-row justify-between md:items-center  ${bgColor}`}
     >
       <div className="flex gap-20 flex-col">
-        <h1 className="font-gogh text-xl cursor-pointer hover:text-white">
+        <h1 className="font-gogh text-xl cursor-pointer hover:text-lightText">
           <SmoothScrollLink toTop={true}>CAMERON LOXDALE</SmoothScrollLink>
         </h1>
         <p className="font-gogh text-lg">Comedy Writer</p>
@@ -49,13 +49,13 @@ const Navbar = () => {
 
       <div className="flex  font-gogh  uppercase text-lg relative">
         <ul className="flex gap-x-[10px] flex-wrap">
-          <li className='hover:text-white'>
+          <li className='hover:text-lightText'>
             <SmoothScrollLink to="#contacts" offset={offset}>Contact</SmoothScrollLink>
           </li>
-          <li className='hover:text-white'>
+          <li className='hover:text-lightText'>
             <SmoothScrollLink to="#credits" offset={offset}>Credits</SmoothScrollLink>
           </li>
-          <li className='hover:text-white'>
+          <li className='hover:text-lightText'>
             <SmoothScrollLink to="#nonsense" offset={offset}>Nonsense</SmoothScrollLink>
           </li>
         </ul>
