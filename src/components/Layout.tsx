@@ -17,8 +17,14 @@ export default function Layout({ children }) {
         setShowModal(false);
     };
     const { theme } = useTheme();
-    const mainClass = theme === 'dark' ? 'bg-darkSecondary text-lightText' : 'bg-lightBackground text-darkText';
-
+    let mainClass;
+    if (theme === 'dark') {
+        mainClass = 'bg-darkSecondary text-lightText';
+    } else if (theme === 'tooDark') {
+        mainClass = 'bg-tooDark';
+    } else {
+        mainClass = 'bg-lightBackground text-darkText';
+    }
 
     return (
         <>

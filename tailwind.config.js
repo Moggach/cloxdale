@@ -30,6 +30,7 @@ module.exports = {
         darkSecondary: '#282828',
         lightText: "#FFFFFF",
         darkText: "#000000",
+        tooDark: "#000000",
       },
       width: {
         'content': 'max-content', // Add a custom width utility

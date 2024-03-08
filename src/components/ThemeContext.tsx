@@ -3,7 +3,9 @@ import React from 'react';
 const ThemeContext = React.createContext({
   theme: 'light', // Default theme
   setLightTheme: () => {}, 
-  setDarkTheme: () => {} 
+  setDarkTheme: () => {},
+  setTooDarkTheme: () => {} 
+
 });
 
 export const ThemeProvider = ({ children }) => {
@@ -11,9 +13,11 @@ export const ThemeProvider = ({ children }) => {
 
   const setLightTheme = () => setTheme('light');
   const setDarkTheme = () => setTheme('dark');
+  const setTooDarkTheme = () => setTheme('tooDark');
+
 
   return (
-    <ThemeContext.Provider value={{ theme, setLightTheme, setDarkTheme }}>
+    <ThemeContext.Provider value={{ theme, setLightTheme, setDarkTheme, setTooDarkTheme }}>
       {children}
     </ThemeContext.Provider>
   );
