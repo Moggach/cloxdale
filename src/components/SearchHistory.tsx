@@ -53,7 +53,6 @@ const SearchHistory = ({ searchItem }) => {
   const { theme } = useTheme();
   const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
   const textColor = theme === 'dark' ? 'text-darkText' : 'text-lightText';
-  console.log(textColor)
 
   return (
     <div ref={containerRef} className="">
