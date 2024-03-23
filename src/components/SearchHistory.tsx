@@ -65,7 +65,7 @@ const SearchHistory = ({ searchItem }) => {
       >
         {searchItem.map((item, index) => (
           <motion.li variants={variants} key={index}>
-           <div className='font-poppins  text-base'>{item.text}</div> 
+           <div className='font-gfs  text-base'>{item.text}</div> 
           </motion.li>
         ))}
       </motion.ul>
