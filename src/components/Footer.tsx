@@ -18,7 +18,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between lg:p-40 font-gfs text-base ${bgColor} ${textColor}`}>
+    <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between lg:p-40 font-karla text-base ${bgColor} ${textColor}`}>
       &copy; Cameron Loxdale 2024
       <div className="flex flex-row gap-2">
         <a href="https://bsky.app/profile/cloxdale.bsky.social">

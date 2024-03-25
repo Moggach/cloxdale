@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         gogh: ['Gogh', 'sans'], 
-        gfs: ['GFS', 'sans-serif'], 
+        karla: ['Karla', 'sans-serif'], 
       },
       spacing: {
         '20': '20px',
@@ -18,7 +18,7 @@ module.exports = {
       },
       gap: (theme) => theme('spacing'), 
       fontSize: {
-        'base': '20px',    
+        'base': '18px',    
         'lg': '24px',   
         'xl': '32px',   
         '2xl': '48px',   
