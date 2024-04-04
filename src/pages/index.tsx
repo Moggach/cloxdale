@@ -15,6 +15,7 @@ import Nonsense from '~/components/Nonsense'
 import SearchHistory from '~/components/SearchHistory'
 import { ScrollProvider } from '~/components/ScrollContext';
 import { ThemeProvider } from '~/components/ThemeContext';
+import Head from 'next/head';
 
 
 
@@ -67,17 +68,17 @@ export default function IndexPage(
 
   return (
     <>
+     <Head>
+        <title>Cameron Loxdale</title>
+      </Head>
       <ThemeProvider>
-
         <ScrollProvider>
-
           <Layout>
             <HeroSection section={section} />
             <Contacts contacts={contacts} />
             <Credits credit={credits} />
             <Nonsense nonsense={nonsense} />
             <SearchHistory searchItem={searchItem} />
-
           </Layout>
         </ScrollProvider>
       </ThemeProvider>
