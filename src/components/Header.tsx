@@ -53,10 +53,9 @@ const Header = forwardRef((props, ref) => {
         className={`z-10 sticky top-0 p-20 lg:px-60 flex gap-20 flex-col md:flex-row justify-between md:items-center ${textColor} ${bgColor}`}
       >
         <div className="flex gap-20 flex-col">
-          <h1 className="font-gogh text-xl cursor-pointer ">
+          <h1 className="font-gogh text-xl cursor-pointer uppercase">
             <SmoothScrollLink toTop={true}>Cameron Loxdale&apos;s Very Professional Website</SmoothScrollLink>
           </h1>
-          <p className="font-gogh text-lg">Comedy Writer</p>
         </div>
 
         <div className="flex  font-gogh  uppercase text-lg relative">
