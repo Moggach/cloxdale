@@ -78,7 +78,7 @@ export default function IndexPage(
             <Contacts contacts={contacts} />
             <Credits credit={credits} />
             <Nonsense nonsense={nonsense} />
-            <SearchHistory searchItem={searchItem} />
+            <SearchHistory />
           </Layout>
         </ScrollProvider>
       </ThemeProvider>
