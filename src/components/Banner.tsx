@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Banner = ({ onClose, headerHeight }) => {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(false);
+      setTimeout(onClose, 800); 
+    }, 5000);
+    return () => clearTimeout(timer); 
+  }, [onClose]);
+
   return (
-    <div className="banner" style={{ height: headerHeight }}>
+    <div className={`banner ${visible ? 'slide-down' : 'slide-up'}`} style={{ height: headerHeight }}>
       Congratulations on being the millionth visitor to my website 🎉
       <button onClick={onClose} className="close-button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20" height="20">
