@@ -68,9 +68,6 @@ const SearchHistory = () => {
     { text: 'Bank account saying it&apos;s empty' },
     { text: 'Backhand wearing several expensive rings over solid gold glove' }
 
-
-
-
   ];
 
   return (
