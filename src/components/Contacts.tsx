@@ -32,7 +32,7 @@ const Contacts = ({ contacts }) => {
       <div ref={sectionRef} id="contacts" className="flex flex-col gap-40 md:flex-row md:gap-60 ">
         {/* Contacts with nocontact true */}
         <div className="flex flex-col gap-20 basis-1/2">
-          <h2 className={`font-gogh text-lg  p-3 w-content rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}>  CONTACT</h2>
+          <h2 className={`font-gogh text-lg  p-3 w-content rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}> WAYS TO CONTACT ME</h2>
 
           {otherContactsArray.map((contact, index) => (
             <div key={index}>
@@ -43,7 +43,7 @@ const Contacts = ({ contacts }) => {
 
         {/* Contacts with nocontact false */}
         <div className="flex flex-col gap-20 basis-1/2">
-          <h2 className={`font-gogh text-lg p-3 rounded-sm rotate-3 inline-block ${bgColor} ${textColor}`}>  WAYS NOT TO CONTACT ME FOR BALANCE</h2>
+          <h2 className={`font-gogh text-lg p-3 rounded-sm rotate-3 inline-block ${bgColor} ${textColor}`}>  WAYS NOT TO CONTACT ME</h2>
 
           {noContactArray.map((contact, index) => (
             <div key={index}>
