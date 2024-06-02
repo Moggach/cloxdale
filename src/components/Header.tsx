@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import SmoothScrollLink from './SmoothScrollLink';
 import { useTheme } from '~/components/ThemeContext';
 
-
-const Navbar = () => {
+const Navbar = forwardRef((props, ref) => {
   const [offset, setOffset] = useState(170);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const navbarRef = useRef(null);
+  const combinedRef = ref || navbarRef; 
 
   useEffect(() => {
     const updateOffset = () => {
-      if (navbarRef.current) {
-        const navbarHeight = navbarRef.current.offsetHeight;
+      if (combinedRef.current) {
+        const navbarHeight = combinedRef.current.offsetHeight;
         setOffset(navbarHeight + 20);
       }
     };
@@ -20,7 +20,7 @@ const Navbar = () => {
     window.addEventListener('resize', updateOffset);
 
     return () => window.removeEventListener('resize', updateOffset);
-  }, []);
+  }, [combinedRef]);
 
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
@@ -49,7 +49,7 @@ const Navbar = () => {
     <>
       {theme === 'tooDark' && <div className="black-overlay"></div>}
       <nav
-        ref={navbarRef}
+        ref={combinedRef}
         className={`z-10 sticky top-0 p-20 lg:px-60 flex gap-20 flex-col md:flex-row justify-between md:items-center ${textColor} ${bgColor}`}
       >
         <div className="flex gap-20 flex-col">
@@ -94,11 +94,9 @@ const Navbar = () => {
             )}
           </div>
         </div>
-
-
       </nav>
     </>
   );
-};
+});
 
 export default Navbar;
