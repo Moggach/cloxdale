@@ -2,16 +2,17 @@ import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import SmoothScrollLink from './SmoothScrollLink';
 import { useTheme } from '~/components/ThemeContext';
 
-const Navbar = forwardRef((props, ref) => {
+const Header = forwardRef((props, ref) => {
   const [offset, setOffset] = useState(170);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const navbarRef = useRef(null);
-  const combinedRef = ref || navbarRef; 
+  const combinedRef = ref || navbarRef;
 
   useEffect(() => {
     const updateOffset = () => {
-      if (combinedRef.current) {
-        const navbarHeight = combinedRef.current.offsetHeight;
+      const refElement = (combinedRef && 'current' in combinedRef) ? combinedRef.current : null;
+      if (refElement) {
+        const navbarHeight = refElement.offsetHeight;
         setOffset(navbarHeight + 20);
       }
     };
@@ -21,7 +22,6 @@ const Navbar = forwardRef((props, ref) => {
 
     return () => window.removeEventListener('resize', updateOffset);
   }, [combinedRef]);
-
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
   };
@@ -99,4 +99,6 @@ const Navbar = forwardRef((props, ref) => {
   );
 });
 
-export default Navbar;
+Header.displayName = 'Header';
+
+export default Header;
