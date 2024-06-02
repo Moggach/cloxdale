@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps<
   const credits = await client.fetch(`*[_type == "credit"]`)
   const contacts = await client.fetch(`*[_type == "contact"]`)
   const nonsense = await client.fetch(`*[_type == "nonsense"]`)
-  const searchItem = await client.fetch(`*[_type == "searchItem"]`)
+  const searchItem = await client.fetch(`*[_type == "searchItem"] | order(createdAt desc)`)
 
 
   return {
