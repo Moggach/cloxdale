@@ -53,9 +53,9 @@ const SearchHistory = () => {
   const { theme } = useTheme();
   const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
   const textColor = theme === 'dark' ? 'text-darkText' : 'text-lightText';
-
+  
   const searchItems = [
-    { text: 'Weird bumps on back'},
+    { text: 'Weird bumps on back' },
     { text: 'Bumps grown into small fingers?' },
     { text: 'Hand emerging from back webMD' },
     { text: 'Can a man grow a third hand?' },
@@ -64,10 +64,9 @@ const SearchHistory = () => {
     { text: 'Backhand has just passed a typing exam??' },
     { text: 'Solid gold glove, singular, next day delivery' },
     { text: 'How to change thumbprint recognition' },
-    { text: 'Can a hand steal a man&apos;s identity?' },
-    { text: 'Bank account saying it&apos;s empty' },
+    { text: 'Can a hand steal a man\'s identity?' },
+    { text: 'Bank account saying it\'s empty' },
     { text: 'Backhand wearing several expensive rings over solid gold glove' }
-
   ];
 
   return (
