@@ -8,15 +8,19 @@ const HeroSection = ({ section }) => {
     <>
     <div className="flex flex-col-reverse lg:flex-row gap-40 font-karla text-base ">
       <div className="basis-1/2">
-        {section[0].body.map((block) => (
-          <div key={block._key} style={{ margin: '10px 0' }}>
-            {block.children.map((child) => (
-              <span key={child._key} style={child.marks.includes('strong') ? { fontWeight: '900' } : {}}>
-                {child.text}
-              </span>
-            ))}
-          </div>
-        ))}
+        {section[0].body.map((block) => {
+          const isH3 = block.style === 'h3';
+          const Wrapper = isH3 ? 'h3' : 'div';
+          return (
+            <Wrapper key={block._key} style={{ margin: '10px 0' }}>
+              {block.children.map((child) => (
+                <span key={child._key}>
+                  {child.text}
+                </span>
+              ))}
+            </Wrapper>
+          );
+        })}
       </div>
       <div className="basis-1/2">
 
