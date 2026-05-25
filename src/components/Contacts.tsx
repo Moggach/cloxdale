@@ -38,12 +38,6 @@ const Contacts = ({ contacts }) => {
               <div className="font-karla text-base">Or you can go directly to my agent <a href="">here.</a></div>
         </div>
   
-        {/* Contacts with nocontact false */}
-        <div className="flex flex-col gap-20 basis-1/2">
-          <h2 className={`font-gogh text-lg p-3 rounded-sm rotate-3 inline-block ${bgColor} ${textColor}`}> WAYS NOT TO CONTACT ME</h2> 
-              <div className="font-karla  text-base">For balance, I should state that you can also contact other people. 
-              <p>Here are some contact details for Dwayne the Rock Johnson in the rare event that his skills suit your needs more than mine do.</p></div>
-        </div>
         </div>
       <Dots />
     </>
