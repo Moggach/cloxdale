@@ -68,7 +68,7 @@ export default function IndexPage(
 
   return (
     <>
-     <Head>
+      <Head>
         <title>Cameron Loxdale</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -76,9 +76,9 @@ export default function IndexPage(
         <ScrollProvider>
           <Layout>
             <HeroSection section={section} />
-            <Contacts contacts={contacts} />
             <Credits credit={credits} />
             <ScriptConsultant scriptConsultant={scriptConsultant} />
+            <Contacts contacts={contacts} />
             <SearchHistory />
           </Layout>
         </ScrollProvider>
