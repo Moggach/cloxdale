@@ -30,19 +30,50 @@ const TypewriterText = ({ text, isVisible, onComplete }: { text: string; isVisib
   );
 };
 
-const searchItems = [
-  { text: 'Weird bumps on back' },
-  { text: 'Bumps grown into small fingers?' },
-  { text: 'Hand emerging from back webMD' },
-  { text: 'Can a man grow a third hand?' },
-  { text: 'Is that what backhand means?' },
-  { text: 'Why is backhand just doing jazz hands?' },
-  { text: 'Backhand has just passed a typing exam??' },
-  { text: 'Solid gold glove, singular, next day delivery' },
-  { text: 'How to change thumbprint recognition' },
-  { text: "Can a hand steal a man's identity?" },
-  { text: "Bank account saying it's empty" },
-  { text: 'Backhand wearing several expensive rings over solid gold glove' }
+const searchSets = [
+  [
+    { text: 'Weird bumps on back' },
+    { text: 'Bumps grown into small fingers?' },
+    { text: 'Hand emerging from back webMD' },
+    { text: 'Can a man grow a third hand?' },
+    { text: 'Is that what backhand means?' },
+    { text: 'Why is backhand just doing jazz hands?' },
+    { text: 'Backhand has just passed a typing exam??' },
+    { text: 'Solid gold glove, singular, next day delivery' },
+    { text: 'How to change thumbprint recognition' },
+    { text: "Can a hand steal a man's identity?" },
+    { text: "Bank account saying it's empty" },
+    { text: 'Backhand wearing several expensive rings over solid gold glove' }
+  ],
+  [
+    { text: 'How to tell if your shadow is following you' },
+    { text: 'Is it normal for shadow to be ahead of you' },
+    { text: 'Shadow arrived home before me??' },
+    { text: 'Shadow signed for a parcel' },
+    { text: 'Can a shadow open a bank account' },
+    { text: 'Shadow has better credit score than me' },
+    { text: 'Shadow bought a flat in zone 2' },
+    { text: 'How to evict a shadow' },
+    { text: 'Shadow contesting eviction notice?' },
+    { text: 'Shadow won the eviction case' },
+    { text: 'Renting a room from your own shadow legality' },
+    { text: 'Shadow has started subletting to other shadows' }
+  ],
+  [
+    { text: 'New way to cook eggs.' },
+    { text: 'New way to cook eggs, not boiled or fried.' },
+    { text: 'Secret new way to cook eggs.' },
+    { text: 'Egg in air fryer?' },
+    { text: 'New airfryer that takes whole egg.' },
+    { text: 'Is it good to eat raw egg?' },
+    { text: 'Does heimlich manoeuvre remove egg' }
+  ],
+  [
+    { text: 'Is Wallace from Wallace and Gromit religious' },
+    { text: 'Is Wallace god-fearing?' },
+    { text: 'Name of Wallace\'s clay dog' },
+    { text: 'Is Gromit an allegory to the watchful eye of Christ?' }
+  ]
 ];
 
 const variants = {
@@ -57,7 +88,12 @@ const SearchHistory = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [timestamps, setTimestamps] = useState<string[]>([]);
+  const [searchItems, setSearchItems] = useState<{ text: string }[]>([]);
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    setSearchItems(searchSets[Math.floor(Math.random() * searchSets.length)]);
+  }, []);
 
   useEffect(() => {
     const base = new Date();
