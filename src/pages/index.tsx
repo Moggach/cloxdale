@@ -6,12 +6,12 @@ import type { SharedPageProps } from '~/pages/_app'
 import type { heroSection } from '~/lib/sanity.queries'
 import type { Credit } from '~/lib/sanity.queries'
 import type { Contact } from '~/lib/sanity.queries'
-import type { nonsense } from '~/lib/sanity.queries'
+import type { scriptConsultant } from '~/lib/sanity.queries'
 import type { searchItem } from '~/lib/sanity.queries'
 import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
-import Nonsense from '~/components/Nonsense'
+import ScriptConsultant from '~/components/ScriptConsultant'
 import SearchHistory from '~/components/SearchHistory'
 import { ScrollProvider } from '~/components/ScrollContext';
 import { ThemeProvider } from '~/components/ThemeContext';
@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<
     section: heroSection[]
     credits: Credit[]
     contacts: Contact[]
-    nonsense: nonsense[]
+    scriptConsultant: scriptConsultant[]
     searchItem: searchItem[]
   }
 
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<
   const section = await client.fetch(`*[_type == "heroSection"]`)
   const credits = await client.fetch(`*[_type == "credit"]`)
   const contacts = await client.fetch(`*[_type == "contact"]`)
-  const nonsense = await client.fetch(`*[_type == "nonsense"]`)
+  const scriptConsultant = await client.fetch(`*[_type == "scriptConsultant"]`)
   const searchItem = await client.fetch(`*[_type == "searchItem"] | order(createdAt desc)`)
 
 
@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps<
       section,
       credits,
       contacts,
-      nonsense,
+      scriptConsultant,
       searchItem
 
     },
@@ -60,7 +60,7 @@ export default function IndexPage(
   const section = props.section
   const credits = props.credits
   const contacts = props.contacts
-  const nonsense = props.nonsense
+  const scriptConsultant = props.scriptConsultant
   const searchItem = props.searchItem
 
 
@@ -78,7 +78,7 @@ export default function IndexPage(
             <HeroSection section={section} />
             <Contacts contacts={contacts} />
             <Credits credit={credits} />
-            <Nonsense nonsense={nonsense} />
+            <ScriptConsultant scriptConsultant={scriptConsultant} />
             <SearchHistory />
           </Layout>
         </ScrollProvider>

@@ -22,7 +22,7 @@ export type Credit = {
   externalLink: string;
  };
 
- export type nonsense = {
+ export type scriptConsultant = {
   _id: string;
   title: string;
   slug: {
