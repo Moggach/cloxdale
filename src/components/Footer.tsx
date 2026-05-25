@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className={`p-4 flex flex-col gap-20 md:flex-row md:justify-between lg:p-40 font-karla text-base ${bgColor} ${textColor}`}>
-      &copy; Cameron Loxdale 2024
+      &copy; Cameron Loxdale 2026
       <div className="flex flex-row gap-2 items-center">
               <a href="https://bsky.app/profile/cloxdale.bsky.social">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 600 530"
