@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from './ThemeContext';
 
@@ -18,7 +18,7 @@ const TypewriterText = ({ text, isVisible, onComplete }: { text: string; isVisib
       }
     }, 80);
     return () => clearInterval(interval);
-  }, [isVisible, text]);
+  }, [isVisible, text, onComplete]);
 
   return (
     <span>
@@ -29,6 +29,21 @@ const TypewriterText = ({ text, isVisible, onComplete }: { text: string; isVisib
     </span>
   );
 };
+
+const searchItems = [
+  { text: 'Weird bumps on back' },
+  { text: 'Bumps grown into small fingers?' },
+  { text: 'Hand emerging from back webMD' },
+  { text: 'Can a man grow a third hand?' },
+  { text: 'Is that what backhand means?' },
+  { text: 'Why is backhand just doing jazz hands?' },
+  { text: 'Backhand has just passed a typing exam??' },
+  { text: 'Solid gold glove, singular, next day delivery' },
+  { text: 'How to change thumbprint recognition' },
+  { text: "Can a hand steal a man's identity?" },
+  { text: "Bank account saying it's empty" },
+  { text: 'Backhand wearing several expensive rings over solid gold glove' }
+];
 
 const variants = {
   hidden: { opacity: 0 },
@@ -91,21 +106,10 @@ const SearchHistory = () => {
   const { theme } = useTheme();
   const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
   const textColor = theme === 'dark' ? 'text-darkText' : 'text-lightText';
-  
-  const searchItems = [
-    { text: 'Weird bumps on back' },
-    { text: 'Bumps grown into small fingers?' },
-    { text: 'Hand emerging from back webMD' },
-    { text: 'Can a man grow a third hand?' },
-    { text: 'Is that what backhand means?' },
-    { text: 'Why is backhand just doing jazz hands?' },
-    { text: 'Backhand has just passed a typing exam??' },
-    { text: 'Solid gold glove, singular, next day delivery' },
-    { text: 'How to change thumbprint recognition' },
-    { text: 'Can a hand steal a man\'s identity?' },
-    { text: 'Bank account saying it\'s empty' },
-    { text: 'Backhand wearing several expensive rings over solid gold glove' }
-  ];
+
+  const handleTypeComplete = useCallback(() => {
+    setCurrentIndex((c) => c + 1);
+  }, []);
 
   return (
     <div ref={containerRef} className="">
@@ -124,7 +128,7 @@ const SearchHistory = () => {
                <TypewriterText
                  text={item.text}
                  isVisible={index === currentIndex}
-                 onComplete={() => setCurrentIndex((c) => c + 1)}
+                 onComplete={handleTypeComplete}
                />
              </span>
            </div>
