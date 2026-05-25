@@ -37,7 +37,11 @@ export default function Layout({ children }) {
     <>
       <Header ref={headerRef} />
       <div className={`${mainClass}`}>
-        {isExploding && <ConfettiExplosion className="z-50" force={0.8} duration={3000} particleCount={500} width={5000} />}
+        {isExploding && (
+          <div style={{ position: 'fixed', top: '50%', left: '50%', zIndex: 50 }}>
+            <ConfettiExplosion force={0.8} duration={3000} particleCount={500} width={5000} />
+          </div>
+        )}
         {showBanner && <Banner onClose={handleCloseBanner} headerHeight={headerHeight} />}
         <main className={`px-20 flex flex-col gap-60 md:gap-80 pb-60 pt-40 lg:pt-60 ${mainClass}`}>{children}</main>
       </div>
