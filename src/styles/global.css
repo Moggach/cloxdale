@@ -139,6 +139,15 @@ h2.text-lightText {
     1px 2px 4px rgba(0, 0, 0, 0.35);
 }
 
+h2.text-darkText,
+nav .text-darkText,
+nav.text-darkText {
+  text-shadow:
+    0 1px 2px rgba(255, 255, 255, 0.5),
+    0 -1px 1px rgba(0, 0, 0, 0.25),
+    1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
 .banner {
   position: fixed;
   top: 0;
