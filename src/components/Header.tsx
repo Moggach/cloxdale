@@ -54,7 +54,7 @@ const Header = forwardRef((props, ref) => {
       >
         <div className="flex gap-20 flex-col">
           <h1 className="font-gogh text-xl cursor-pointer uppercase max-w-lg">
-            <SmoothScrollLink toTop={true}>Cameron Loxdale&apos;s Very Professional Website</SmoothScrollLink>
+            <SmoothScrollLink toTop={true}>Cameron Loxdale</SmoothScrollLink>
           </h1>
         </div>
 
