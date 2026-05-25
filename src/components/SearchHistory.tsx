@@ -46,20 +46,6 @@ const searchSets = [
     { text: 'Backhand wearing several expensive rings over solid gold glove' }
   ],
   [
-    { text: 'How to tell if your shadow is following you' },
-    { text: 'Is it normal for shadow to be ahead of you' },
-    { text: 'Shadow arrived home before me??' },
-    { text: 'Shadow signed for a parcel' },
-    { text: 'Can a shadow open a bank account' },
-    { text: 'Shadow has better credit score than me' },
-    { text: 'Shadow bought a flat in zone 2' },
-    { text: 'How to evict a shadow' },
-    { text: 'Shadow contesting eviction notice?' },
-    { text: 'Shadow won the eviction case' },
-    { text: 'Renting a room from your own shadow legality' },
-    { text: 'Shadow has started subletting to other shadows' }
-  ],
-  [
     { text: 'New way to cook eggs.' },
     { text: 'New way to cook eggs, not boiled or fried.' },
     { text: 'Secret new way to cook eggs.' },
@@ -90,12 +76,16 @@ const SearchHistory = () => {
   const [timestamps, setTimestamps] = useState<string[]>([]);
   const [searchItems, setSearchItems] = useState<{ text: string }[]>([]);
   const containerRef = useRef(null);
+  const hasPickedSet = useRef(false);
 
   useEffect(() => {
+    if (hasPickedSet.current) return;
+    hasPickedSet.current = true;
     setSearchItems(searchSets[Math.floor(Math.random() * searchSets.length)]);
   }, []);
 
   useEffect(() => {
+    if (searchItems.length === 0) return;
     const base = new Date();
     setTimestamps(
       searchItems.map((_, i) => {
@@ -103,7 +93,7 @@ const SearchHistory = () => {
         return d.toLocaleString();
       })
     );
-  }, []);
+  }, [searchItems]);
 
   useEffect(() => {
     const handleIntersection = (entries) => {
