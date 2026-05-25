@@ -34,8 +34,8 @@ const Contacts = ({ contacts }) => {
         <div className="flex flex-col gap-20 basis-1/2">
           <h2 className={`font-gogh text-lg  p-3 w-content rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}> WAYS TO CONTACT ME</h2>
 
-              <div className="font-karla text-base">You are well within your rights to contact me <a href="mailto:cameronloxdale@yahoo.co.uk?subject=Let%27s%20talk%20turkey">here.</a></div>
-              <div className="font-karla text-base">Or you can go directly to my agent <a href="">here.</a></div>
+              <div className="font-karla text-base">You are well within your rights to <a className="underline text-lightPrimary" href="mailto:cameronloxdale@yahoo.co.uk?subject=Let%27s%20talk%20turkey">contact me</a></div>
+              <div className="font-karla text-base">Or you can go directly to my agent Georgia Kanner at Independent Talent on this <a className="underline text-lightPrimary" href="mailto:georgiakanner@independenttalent.com">email</a></div>
         </div>
   
         </div>
