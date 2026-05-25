@@ -58,7 +58,7 @@ const Header = forwardRef((props, ref) => {
           </h1>
         </div>
 
-        <div className="flex  font-gogh  uppercase text-lg relative">
+        <div className="flex  font-gogh  uppercase text-[20px] relative items-center">
           <ul className="flex gap-x-[10px] flex-wrap">
             <li className=''>
               <SmoothScrollLink to="#contacts" offset={offset}>Contact</SmoothScrollLink>
@@ -67,7 +67,7 @@ const Header = forwardRef((props, ref) => {
               <SmoothScrollLink to="#credits" offset={offset}>Credits</SmoothScrollLink>
             </li>
             <li className=''>
-              <SmoothScrollLink to="#nonsense" offset={offset}>Nonsense</SmoothScrollLink>
+              <SmoothScrollLink to="#script-consultant" offset={offset}>Script Consultant</SmoothScrollLink>
             </li>
           </ul>
           <div onClick={toggleDropdown} className="cursor-pointer ml-4 z-50">
