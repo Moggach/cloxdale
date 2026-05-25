@@ -30,8 +30,7 @@ const Contacts = ({ contacts }) => {
   return (
     <>
       <div ref={sectionRef} id="contacts" className="flex flex-col gap-40 md:flex-row md:gap-60 ">
-        {/* Contacts with nocontact true */}
-        <div className="flex flex-col gap-20 basis-1/2">
+        <div className="flex flex-col gap-20">
           <h2 className={`font-gogh text-lg  p-3 w-content rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}> WAYS TO CONTACT ME</h2>
 
               <div className="font-karla text-base">You are well within your rights to <a className="underline text-lightPrimary" href="mailto:cameronloxdale@yahoo.co.uk?subject=Let%27s%20talk%20turkey">contact me</a></div>
