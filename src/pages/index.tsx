@@ -70,6 +70,7 @@ export default function IndexPage(
     <>
      <Head>
         <title>Cameron Loxdale</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
         <ScrollProvider>
