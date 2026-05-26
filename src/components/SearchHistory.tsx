@@ -139,7 +139,7 @@ const SearchHistory = () => {
 
   return (
     <div ref={containerRef} className="">
-      <h2 className={`font-gogh text-lg mb-[30px] p-3 rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}>CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
+      <h2 className={`font-gogh text-lg mb-[30px] p-3 rounded-sm rotate-3 inline-block ${bgColor} ${textColor}`}>CHECK OUT CAMERON&apos;S LIVE INTERNET SEARCH HISTORY!</h2>
       <ul className="flex flex-col gap-20">
         {searchItems.map((item, index) => (
           <motion.li
