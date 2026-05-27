@@ -60,7 +60,7 @@ export default function Layout({ children }) {
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label="Scroll to top"
-        className="md:hidden fixed bottom-6 right-6 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-lightPrimary shadow-lg transition-opacity duration-300"
+        className={`md:hidden fixed bottom-6 right-6 z-50 flex items-center justify-center w-10 h-10 rounded-full shadow-lg transition-opacity duration-300 ${theme === 'light' ? 'bg-lightPrimary' : 'bg-darkPrimary'}`}
         style={{ opacity: headerVisible ? 0 : 1, pointerEvents: headerVisible ? 'none' : 'auto' }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
