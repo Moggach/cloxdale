@@ -31,7 +31,7 @@ const Credits = ({ credit }) => {
                     {credit.map((credit, index) => (
                         <div key={index} className="flex flex-col gap-3 group">
                             <Image
-                                src={urlForImage(credit.image).width(600).height(400).url()}
+                                src={urlForImage(credit.image)?.width(600).height(400).url()}
                                 height={400}
                                 width={600}
                                 alt=""
