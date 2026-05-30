@@ -32,34 +32,44 @@ const TypewriterText = ({ text, isVisible, onComplete }: { text: string; isVisib
 
 const searchSets = [
   [
-    { text: 'Weird bumps on back' },
-    { text: 'Bumps grown into small fingers?' },
-    { text: 'Hand emerging from back webMD' },
-    { text: 'Can a man grow a third hand?' },
-    { text: 'Is that what backhand means?' },
-    { text: 'Why is backhand just doing jazz hands?' },
-    { text: 'Backhand has just passed a typing exam??' },
-    { text: 'Solid gold glove, singular, next day delivery' },
-    { text: 'How to change thumbprint recognition' },
-    { text: "Can a hand steal a man's identity?" },
-    { text: "Bank account saying it's empty" },
-    { text: 'Backhand wearing several expensive rings over solid gold glove' }
+    { text: 'Why is my search history appearing on my website' },
+    { text: 'How to stop internet history appearing on website' },
+    { text: 'Contact email for Bill Gates' },
+    { text: 'Home address for Bill Gates' },
+    { text: 'Bill Gates Cameo?' },
+    { text: "Bill if you're reading this, what the hell is going on" },
   ],
   [
-    { text: 'New way to cook eggs.' },
-    { text: 'New way to cook eggs, not boiled or fried.' },
-    { text: 'Secret new way to cook eggs.' },
-    { text: 'Egg in air fryer?' },
-    { text: 'New airfryer that takes whole egg.' },
-    { text: 'Is it good to eat raw egg?' },
-    { text: 'Does heimlich manoeuvre remove egg' }
+    { text: 'Forum for adult men who are bullied by teenagers at bus stops' },
+    { text: 'How to get big arms' },
+    { text: 'How to get big arms without exercise' },
+    { text: 'Arms next day delivery' },
+    { text: 'Arms (not weapons) next day delivery' },
+    { text: 'Prosthetic biceps to fool mean teens' },
   ],
   [
-    { text: 'Is Wallace from Wallace and Gromit religious' },
-    { text: 'Is Wallace god-fearing?' },
-    { text: 'Name of Wallace\'s clay dog' },
-    { text: 'Is Gromit an allegory to the watchful eye of Christ?' }
-  ]
+    { text: 'Cameron Loxdale' },
+    { text: 'Cameron Loxdale comedy' },
+    { text: 'Cameron Loxdale hilarious' },
+    { text: 'Is googling yourself bad for you?' },
+    { text: 'Is googling yourself good for you?' },
+    { text: 'Why is googling yourself SO good for you?' },
+    { text: 'How many years will googling myself add to my life expectancy?' },
+    { text: 'Will there be enough resources in the year 2190?' },
+    { text: 'How to build a nuclear bunker' },
+    { text: "How to stop my guards turning against me once money means nothing" },
+  ],
+  [
+    { text: "What was the Dance Dance Revolution?" },
+    { text: "Did they have other policies besides dancing?" },
+    { text: "Dance Dance Revolution number of casualties" },
+  ],
+  [
+    { text: "Is anyone from the 'Live Kenan and Kel studio audience' still alive?" },
+    { text: "Is it a live studio audience if they're all dead now?" },
+    { text: "Are we listening to the laughter of ghosts?" },
+    { text: "Kel's Orange Soda UK delivery" },
+  ],
 ];
 
 const variants = {
