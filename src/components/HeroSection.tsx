@@ -28,7 +28,7 @@ const HeroSection = ({ section }) => {
         height={300}
         layout="responsive"
         alt=""
-        className="rounded-md"
+        className="rounded-md drop-shadow-md"
       />
       <figcaption className="pt-2 text-center font-karla text-md italic opacity-60 border-l-2 border-lightPrimary pl-3 mt-2">A known mover and shaker in the industry, Cameron will typically wear shades to intimidate his opposite number in a general meeting.</figcaption>
       </div>
