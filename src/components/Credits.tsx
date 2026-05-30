@@ -30,7 +30,7 @@ const Credits = ({ credit }) => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-5">
                     {credit.map((credit, index) => (
                         <div key={index} className="flex flex-col gap-3 group">
-                            <div className="relative h-48 w-full">
+                            <div className="relative h-32 md:h-48 w-full">
                                 <Image
                                     src={urlForImage(credit.image)?.width(600).url()}
                                     fill
@@ -41,7 +41,7 @@ const Credits = ({ credit }) => {
                             {credit.excerpt.map((block) => (
                                 <div key={block._key}>
                                     {block.children.map((child) => (
-                                        <span className="font-karla text-md" key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
+                                        <span className="font-karla text-xs md:text-md" key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
                                             {child.text}
                                         </span>
                                     ))}
