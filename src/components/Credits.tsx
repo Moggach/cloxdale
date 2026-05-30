@@ -30,12 +30,14 @@ const Credits = ({ credit }) => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-5">
                     {credit.map((credit, index) => (
                         <div key={index} className="flex flex-col gap-3 group">
-                            <Image
-                                src={urlForImage(credit.image)?.width(600).height(400).url()}
-                                height={400}
-                                width={600}
-                                alt=""
-                            />
+                            <div className="relative h-48 w-full">
+                                <Image
+                                    src={urlForImage(credit.image)?.width(600).url()}
+                                    fill
+                                    alt=""
+                                    className="object-contain"
+                                />
+                            </div>
                             {credit.excerpt.map((block) => (
                                 <div key={block._key}>
                                     {block.children.map((child) => (
