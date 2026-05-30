@@ -130,34 +130,34 @@ nav.text-darkText {
   z-index: 1000;
   align-items: center;
   box-shadow: 0 2px 12px rgba(134, 101, 202, 0.35);
-  transition: top 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .slide-down {
-  top: 0;
+  transform: translateY(0);
   animation: slide-down 0.8s ease-in-out;
 }
 
 .slide-up {
-  top: -100px;
+  transform: translateY(-110%);
   animation: slide-up 0.8s ease-in-out;
 }
 
 @keyframes slide-down {
   from {
-    top: -100px;
+    transform: translateY(-110%);
   }
   to {
-    top: 0;
+    transform: translateY(0);
   }
 }
 
 @keyframes slide-up {
   from {
-    top: 0;
+    transform: translateY(0);
   }
   to {
-    top: -100px;
+    transform: translateY(-110%);
   }
 }
 

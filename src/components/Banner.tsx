@@ -7,7 +7,7 @@ const Banner = ({ onClose, headerHeight }) => {
     const timer = setTimeout(() => {
       setVisible(false);
       setTimeout(onClose, 800); 
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(timer); 
   }, [onClose]);
 
