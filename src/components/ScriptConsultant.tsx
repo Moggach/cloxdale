@@ -52,7 +52,7 @@ const ScriptWork = () => {
                         <p>I&apos;ve done stuff basically.</p>
                     </div>
 
-                    <p>If you&apos;re reading this because you&apos;re curious but don&apos;t really write scripts and instead are more of a standup and you want notes on your show - you can hit me up here.</p>
+                    <p>If you&apos;re reading this because you&apos;re curious but don&apos;t really write scripts and instead are more of a standup and you want notes on your show - you can <a href="#" className="underline text-lightPrimary">hit me up here</a>.</p>
                 </div>
                 </div>
             </div>
