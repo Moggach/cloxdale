@@ -1,9 +1,15 @@
 import Image from 'next/image'
 import { urlForImage } from '~/lib/sanity.image'
 import Dots from './Dots'
+import { useTheme } from './ThemeContext'
 
 
 const HeroSection = ({ section }) => {
+  const { theme } = useTheme();
+  const shadowStyle = theme === 'dark'
+    ? { filter: 'drop-shadow(0 4px 6px rgba(255,255,255,0.15))' }
+    : { filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.25))' };
+
   return (
     <>
     <div className="flex flex-col-reverse lg:flex-row gap-40 font-karla text-base ">
@@ -28,7 +34,8 @@ const HeroSection = ({ section }) => {
         height={300}
         layout="responsive"
         alt=""
-        className="rounded-md drop-shadow-md"
+        className="rounded-md"
+        style={shadowStyle}
       />
       <figcaption className="pt-2 text-center font-karla text-md italic opacity-60 border-l-2 border-lightPrimary pl-3 mt-2">A known mover and shaker in the industry, Cameron will typically wear shades to intimidate his opposite number in a general meeting.</figcaption>
       </div>
