@@ -28,6 +28,11 @@ export default defineType({
       title: 'External link',
       type: 'string',
     }),
+    defineField({
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    }),
   ],
 
 })

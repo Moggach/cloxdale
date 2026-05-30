@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps<
 > = async ({ draftMode = false }) => {
   const client = getClient(draftMode ? { token: readToken } : undefined)
   const section = await client.fetch(`*[_type == "heroSection"]`)
-  const credits = await client.fetch(`*[_type == "credit"]`)
+  const credits = await client.fetch(`*[_type == "credit"] | order(order asc)`)
   const contacts = await client.fetch(`*[_type == "contact"]`)
   const scriptConsultant = await client.fetch(`*[_type == "scriptConsultant"]`)
   const searchItem = await client.fetch(`*[_type == "searchItem"] | order(createdAt desc)`)
