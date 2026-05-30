@@ -26,7 +26,7 @@ const Credits = ({ credit }) => {
     return (
         <>
             <div ref={sectionRef} id="credits" className=''>
-                <h2 className={`font-gogh text-lg p-3 w-content rounded-sm -rotate-3 inline-block ${textColor} ${bgColor}`}>CREDITS</h2>
+                <h2 className={`font-gogh text-lg p-3 w-content rounded-sm -rotate-3 inline-block ${textColor} ${bgColor}`}>STUFF I'VE WORKED ON</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-5">
                     {credit.map((credit, index) => (
                         <div key={index} className="flex flex-col gap-3 group">
