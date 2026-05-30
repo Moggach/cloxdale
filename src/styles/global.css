@@ -38,50 +38,11 @@ main {
   border-radius: 50%;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  font-size: 16px;
-
-}
-
-.credits-slider .swiper-wrapper {
-  padding-top: 20px;
-}
-
-.credits-slider .swiper-slide {
-  -webkit-transition: 250ms all;
-  transition: 250ms all;
-}
-
-.credits-slider .swiper-slide:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  z-index: 1;
-}
-
-.credits-slider .swiper-slide:first-of-type:hover .excerpt {
-  padding-left: 20px;
-}
-
-
 .fixed-height {
   height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.excerpt {
-  display: none;
-}
-
-.credits-slider .swiper-slide:hover .excerpt {
-  display: block;
-  font-size: 12px;
 }
 
 .modal {
