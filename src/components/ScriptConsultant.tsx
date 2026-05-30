@@ -55,6 +55,9 @@ const ScriptWork = () => {
                     <p>If you&apos;re reading this because you&apos;re curious but don&apos;t really write scripts and instead are more of a standup and you want notes on your show - you can <a href="#" className="underline text-lightPrimary">hit me up here</a>.</p>
                 </div>
                 </div>
+                <div className="font-karla text-sm italic border border-current rounded p-4 max-w-xl">
+                    Hmm... it seems you&apos;re trying to scroll on this website without hiring Cameron to work with you? Did you mean to do that? This has never happened before. Several industry bigwigs are looking at this page right now, we recommend booking him while you still can.
+                </div>
             </div>
             <Dots />
         </>
