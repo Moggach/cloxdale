@@ -62,7 +62,7 @@ const Header = forwardRef((props, ref) => {
           <ul className="flex gap-x-[10px] flex-wrap">
 
             <li className=''>
-              <SmoothScrollLink to="#credits" offset={offset}>Stuff I've worked on</SmoothScrollLink>
+              <SmoothScrollLink to="#credits" offset={offset}>Stuff I&apos;ve worked on</SmoothScrollLink>
             </li>
             <li className=''>
               <SmoothScrollLink to="#script-consultant" offset={offset}>Script Consultant</SmoothScrollLink>
