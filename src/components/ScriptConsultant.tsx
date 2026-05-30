@@ -25,9 +25,29 @@ const ScriptWork= ({ scriptConsultant }) => {
 
     return (
         <>
-            <div ref={sectionRef} id="script-consultant" className="flex flex-col gap-20 ">
+            <div ref={sectionRef} id="script-consultant" className="flex flex-col gap-20">
                 <h2 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h2>
-                <div className="flex flex-col gap-20 md:grid md:grid-cols-2 md:gap-20 items-stretch font-karla  text-base">
+                <div className="flex flex-col lg:flex-row gap-40 font-karla text-base">
+                    <div className="basis-1/2">
+                        <Image
+                            src={urlForImage(scriptConsultant[0]?.image)?.url()}
+                            width={300}
+                            height={300}
+                            layout="responsive"
+                            alt=""
+                        />
+                    </div>
+                    <div className="basis-1/2">
+                        {scriptConsultant[0]?.excerpt.map((block) => (
+                            <div key={block._key} style={{ margin: '10px 0' }}>
+                                {block.children.map((child) => (
+                                    <span key={child._key}>
+                                        {child.text}
+                                    </span>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <Dots />
