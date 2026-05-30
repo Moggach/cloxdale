@@ -38,7 +38,7 @@ const ScriptWork= ({ scriptConsultant }) => {
                         />
                     </div>
                     <div className="basis-1/2">
-                        {scriptConsultant[0]?.excerpt.map((block) => (
+                        {scriptConsultant[0]?.body.map((block) => (
                             <div key={block._key} style={{ margin: '10px 0' }}>
                                 {block.children.map((child) => (
                                     <span key={child._key}>
