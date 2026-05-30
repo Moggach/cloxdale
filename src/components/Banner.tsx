@@ -12,7 +12,7 @@ const Banner = ({ onClose, headerHeight }) => {
   }, [onClose]);
 
   return (
-    <div className={`banner ${visible ? 'slide-down' : 'slide-up'}`} style={{ height: headerHeight }}>
+    <div className={`banner ${visible ? 'slide-down' : 'slide-up'}`} style={headerHeight ? { height: headerHeight } : {}}>
       <span>Congratulations on being the one millionth visitor to my website!</span>
       <button onClick={onClose} className="close-button" aria-label="Close banner">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20" height="20">
