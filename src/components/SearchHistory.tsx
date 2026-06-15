@@ -99,7 +99,7 @@ const SearchHistory = () => {
     const base = new Date();
     setTimestamps(
       searchItems.map((_, i) => {
-        const d = new Date(base.getTime() + i * 2000);
+        const d = new Date(base.getTime() + i * 3000);
         return d.toLocaleString();
       })
     );
