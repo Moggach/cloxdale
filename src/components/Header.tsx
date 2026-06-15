@@ -64,9 +64,11 @@ const Header = forwardRef((props, ref) => {
             <li className=''>
               <SmoothScrollLink to="#credits" offset={offset}>Stuff I&apos;ve worked on</SmoothScrollLink>
             </li>
+            <hr className="w-px h-6 border-0 bg-current self-center" />
             <li className=''>
               <SmoothScrollLink to="#script-consultant" offset={offset}>Script Consultant</SmoothScrollLink>
             </li>
+            <hr className="w-px h-6 border-0 bg-current self-center" />
             <li className=''>
               <SmoothScrollLink to="#contacts" offset={offset}>Contact</SmoothScrollLink>
             </li>
