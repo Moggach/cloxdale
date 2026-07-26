@@ -46,6 +46,52 @@ function ScriptConsultantContent() {
         torturous notes and I know exactly how hard it can be to
         understand and follow up on this kind of feedback.
       </p>
+      <p>
+        I like to help the writer realise the best version of their idea.
+        Looking at characters, dialogue and structure in a way that brings
+        out what is already working well while clarifying anything that
+        isn&rsquo;t quite there yet. All notes are offered as helpful
+        suggestions and I try to offer practical example solutions to
+        problems - if they inspire you to think of a better solution than
+        I&rsquo;ve come up with, then that&rsquo;s the best kind of note.
+      </p>
+      <p>
+        If I have one goal with notes it&rsquo;s to make the writer excited
+        and motivated to get stuck into their next draft.
+      </p>
+
+      <p className="text-xl font-black">And you&rsquo;re doing all this out of the goodness of your heart?</p>
+      <p>
+        No, I will need a bit of money. I offer detailed written notes and
+        also offer an additional chat on a zoom call if you want to discuss
+        further. My standard rates are:
+      </p>
+      <ul className="flex flex-col gap-2 list-disc pl-5">
+        <li>TV half hour script (up to 35 pages) - £99</li>
+        <li>TV hour script (up to 65 pages) - £189</li>
+        <li>Feature length film script (up to 120 pages) - £299</li>
+        <li>Additional 60 minute zoom to discuss your script* - £50</li>
+      </ul>
+      <p className="text-sm italic">
+        *note that this zoom can&rsquo;t be purchased individually as
+        I&rsquo;ll have to read and make notes on the script before
+        discussing it.
+      </p>
+      <p>
+        If your project doesn&rsquo;t fall into these categories or
+        you&rsquo;re looking for a different kind of consultancy, send me a
+        message and we can discuss.
+      </p>
+      <p>
+        I will invoice before reading the script so you know exactly what
+        you are paying and once payment is received I will be able to send
+        you feedback within seven working days. If you need feedback sooner
+        than that because of a deadline, just let me know and I&rsquo;m sure
+        we can make that happen.
+      </p>
+      <p>Get in touch via the google form if you&rsquo;re interested.</p>
+
+      <p>I have worked with the following:</p>
     </div>
   );
 }
