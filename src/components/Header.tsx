@@ -1,27 +1,14 @@
-import React, { useState, useEffect, useRef, forwardRef } from 'react';
+import React, { useState, useRef, forwardRef } from 'react';
 import SmoothScrollLink from './SmoothScrollLink';
 import { useTheme } from '~/components/ThemeContext';
 
+const SCROLL_OFFSET = 20;
+
 const Header = forwardRef((props, ref) => {
-  const [offset, setOffset] = useState(170);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const navbarRef = useRef(null);
   const combinedRef = ref || navbarRef;
 
-  useEffect(() => {
-    const updateOffset = () => {
-      const refElement = (combinedRef && 'current' in combinedRef) ? combinedRef.current : null;
-      if (refElement) {
-        const navbarHeight = refElement.offsetHeight;
-        setOffset(navbarHeight + 20);
-      }
-    };
-
-    updateOffset();
-    window.addEventListener('resize', updateOffset);
-
-    return () => window.removeEventListener('resize', updateOffset);
-  }, [combinedRef]);
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
   };
@@ -62,15 +49,15 @@ const Header = forwardRef((props, ref) => {
           <ul className="flex gap-x-[10px] flex-wrap">
 
             <li className=''>
-              <SmoothScrollLink to="#credits" offset={offset}>Comedy Writer</SmoothScrollLink>
+              <SmoothScrollLink to="#credits" offset={SCROLL_OFFSET}>Comedy Writer</SmoothScrollLink>
             </li>
             <hr className="w-px h-6 border-0 bg-current self-center" />
             <li className=''>
-              <SmoothScrollLink to="#script-consultant" offset={offset}>Script Consultant</SmoothScrollLink>
+              <SmoothScrollLink to="#script-consultant" offset={SCROLL_OFFSET}>Script Consultant</SmoothScrollLink>
             </li>
             <hr className="w-px h-6 border-0 bg-current self-center" />
             <li className=''>
-              <SmoothScrollLink to="#contacts" offset={offset}>Contact</SmoothScrollLink>
+              <SmoothScrollLink to="#contacts" offset={SCROLL_OFFSET}>Contact</SmoothScrollLink>
             </li>
           </ul>
           <div onClick={toggleDropdown} className="cursor-pointer ml-4 z-50">
