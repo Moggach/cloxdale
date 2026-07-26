@@ -18,7 +18,7 @@ function ScriptConsultantContent() {
 
       <div className="relative w-full min-h-[350px] overflow-hidden">
         <Image
-          src="/headshot.jpg"
+          src="/IMG_8280.jpeg"
           fill
           alt="Cameron Loxdale"
           className="rounded-md object-contain"
