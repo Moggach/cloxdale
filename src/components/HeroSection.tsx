@@ -36,7 +36,6 @@ const HeroSection = ({ section }) => {
             style={shadowStyle}
           />
         </div>
-        <figcaption className="pt-2 text-center font-karla text-md italic opacity-60 border-l-2 border-lightPrimary pl-3 mt-2">A known mover and shaker in the industry, Cameron will typically wear shades to intimidate his opposite number in a general meeting.</figcaption>
       </div>
       </div>
 <Dots/>
