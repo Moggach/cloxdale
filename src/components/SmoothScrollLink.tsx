@@ -1,12 +1,13 @@
 import React from 'react';
-import { useScroll } from './ScrollContext'; 
+import { useRouter } from 'next/router';
+import { useScroll } from './ScrollContext';
 
 interface SmoothScrollLinkProps {
   to?: string;
   children: React.ReactNode;
   offset?: number;
   duration?: number;
-  toTop?: boolean; 
+  toTop?: boolean;
 }
 
 const SmoothScrollLink: React.FC<SmoothScrollLinkProps> = ({
@@ -16,16 +17,25 @@ const SmoothScrollLink: React.FC<SmoothScrollLinkProps> = ({
   duration = 500,
   toTop = false,
 }) => {
-  const { getSectionRef } = useScroll(); 
+  const { getSectionRef } = useScroll();
+  const router = useRouter();
+  const isHome = router.pathname === '/';
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     if (toTop) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
+      if (isHome) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        router.push('/');
+      }
+      return;
+    }
+
+    if (isHome) {
       const targetRef = getSectionRef(to);
       if (targetRef && targetRef.current) {
         const targetOffset = targetRef.current.offsetTop - offset;
@@ -34,10 +44,16 @@ const SmoothScrollLink: React.FC<SmoothScrollLinkProps> = ({
           behavior: 'smooth'
         });
       }
+    } else {
+      router.push(`/#${to}`);
     }
   };
 
-  return <a href={toTop ? "#" : `#${to}`} onClick={handleClick}>{children}</a>;
+  const href = toTop
+    ? (isHome ? '#' : '/')
+    : (isHome ? `#${to}` : `/#${to}`);
+
+  return <a href={href} onClick={handleClick}>{children}</a>;
 };
 
 export default SmoothScrollLink;

@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useRef, MutableRefObject, ReactNode } from 'react';
 
+export const SCROLL_OFFSET = 20;
+
 interface ScrollContextType {
   registerSection: (id: string, ref: MutableRefObject<HTMLElement | null>) => void;
   getSectionRef: (id: string) => MutableRefObject<HTMLElement | null> | undefined;

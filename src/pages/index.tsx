@@ -11,6 +11,7 @@ import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
 import SearchHistory from '~/components/SearchHistory'
+import ScrollToHash from '~/components/ScrollToHash';
 import { ScrollProvider } from '~/components/ScrollContext';
 import { ThemeProvider } from '~/components/ThemeContext';
 import Head from 'next/head';
@@ -73,6 +74,7 @@ export default function IndexPage(
             <Credits credit={credits} />
             <Contacts contacts={contacts} />
             <SearchHistory />
+            <ScrollToHash />
           </Layout>
         </ScrollProvider>
       </ThemeProvider>
