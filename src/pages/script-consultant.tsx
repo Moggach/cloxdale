@@ -106,13 +106,13 @@ function ScriptConsultantContent() {
   const insertEvery = Math.ceil(paragraphs.length / (imageCount + 1));
 
   return (
-    <div className="flex flex-col gap-20 font-karla text-base max-w-2xl lg:max-w-5xl">
+    <div className="flex flex-col gap-20 font-karla text-base max-w-2xl lg:max-w-6xl">
       <Link href="/">&larr; Back to home</Link>
 
       <h1 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h1>
 
-      <div className="flex flex-col lg:flex-row lg:gap-40">
-        <div className="flex flex-col gap-20 lg:max-w-2xl">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40">
+        <div className="flex flex-col gap-20">
           <ContentImage {...HERO_IMAGE} className="lg:hidden" style={imageShadow} />
           {paragraphs.map((paragraph, index) => {
             const showMobileImage = index > 0 && index < paragraphs.length - 1 && index % insertEvery === 0;
@@ -126,7 +126,7 @@ function ScriptConsultantContent() {
           })}
         </div>
 
-        <div className="hidden lg:flex lg:flex-col lg:justify-between lg:w-64 lg:shrink-0">
+        <div className="hidden lg:flex lg:flex-col lg:justify-between lg:gap-10">
           {ALL_IMAGES.map((image, index) => (
             <ContentImage key={index} {...image} style={imageShadow} />
           ))}
