@@ -7,20 +7,30 @@ import Banner from '~/components/Banner';
 
 const ConfettiExplosion = dynamic(() => import('react-confetti-explosion'), { ssr: false });
 
+const WELCOME_SEEN_KEY = 'hasSeenWelcome';
+
 export default function Layout({ children }) {
-  const [isExploding, setIsExploding] = useState(true);
-  const [showBanner, setShowBanner] = useState(true); 
+  const [isExploding, setIsExploding] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
   const headerRef = useRef(null);
 
-  const handleCloseBanner = () => { 
+  const handleCloseBanner = () => {
     setShowBanner(false);
   };
 
   useEffect(() => {
     if (headerRef.current) {
       setHeaderHeight(headerRef.current.offsetHeight);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!sessionStorage.getItem(WELCOME_SEEN_KEY)) {
+      setIsExploding(true);
+      setShowBanner(true);
+      sessionStorage.setItem(WELCOME_SEEN_KEY, 'true');
     }
   }, []);
 
