@@ -10,7 +10,6 @@ import type { searchItem } from '~/lib/sanity.queries'
 import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
 import Contacts from '~/components/Contacts'
-import ScriptConsultant from '~/components/ScriptConsultant'
 import SearchHistory from '~/components/SearchHistory'
 import { ScrollProvider } from '~/components/ScrollContext';
 import { ThemeProvider } from '~/components/ThemeContext';
@@ -72,7 +71,6 @@ export default function IndexPage(
           <Layout>
             <HeroSection section={section} />
             <Credits credit={credits} />
-            <ScriptConsultant />
             <Contacts contacts={contacts} />
             <SearchHistory />
           </Layout>

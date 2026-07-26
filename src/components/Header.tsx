@@ -1,4 +1,5 @@
 import React, { useState, useRef, forwardRef } from 'react';
+import Link from 'next/link';
 import SmoothScrollLink from './SmoothScrollLink';
 import { useTheme } from '~/components/ThemeContext';
 
@@ -53,7 +54,7 @@ const Header = forwardRef((props, ref) => {
             </li>
             <hr className="w-px h-6 border-0 bg-current self-center" />
             <li className=''>
-              <SmoothScrollLink to="#script-consultant" offset={SCROLL_OFFSET}>Script Consultant</SmoothScrollLink>
+              <Link href="/script-consultant">Script Consultant</Link>
             </li>
             <hr className="w-px h-6 border-0 bg-current self-center" />
             <li className=''>
