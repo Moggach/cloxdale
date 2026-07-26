@@ -50,7 +50,7 @@ export default function Layout({ children }) {
       <div className={`${mainClass}`}>
         {isExploding && (
           <div style={{ position: 'fixed', top: '50%', left: '50%', zIndex: 50 }}>
-            <ConfettiExplosion force={0.8} duration={3000} particleCount={500} width={5000} />
+            <ConfettiExplosion force={0.8} duration={5000} particleCount={500} width={5000} />
           </div>
         )}
         {showBanner && <Banner onClose={handleCloseBanner} headerHeight={headerHeight} />}
