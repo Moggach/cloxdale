@@ -15,6 +15,16 @@ const CONTENT_IMAGES = [
 
 const ALL_IMAGES = [HERO_IMAGE, ...CONTENT_IMAGES];
 
+const LOGOS = [
+  { src: '/logos/BBC Studios Comedy logo.png', alt: 'BBC Studios Comedy', width: 225, height: 225 },
+  { src: '/logos/VAL logo.jpg', alt: 'Various Artists Limited', width: 711, height: 319 },
+  { src: '/logos/Little Wander logo.jpg', alt: 'Little Wander', width: 1201, height: 676 },
+  { src: '/logos/NOHO Logo.png', alt: 'NOHO Film and Television', width: 318, height: 159 },
+  { src: '/logos/R&B-Logo.jpg', alt: 'Red and Black films', width: 906, height: 500 },
+  { src: '/logos/BBC RADIO WALES.png', alt: 'BBC Radio Wales', width: 600, height: 600 },
+
+];
+
 function ContentImage({ src, width, height, alt = '', className = '', style = undefined }) {
   return (
     <Image
@@ -25,6 +35,14 @@ function ContentImage({ src, width, height, alt = '', className = '', style = un
       className={`w-full h-auto rounded-md shrink-0 ${className}`}
       style={style}
     />
+  );
+}
+
+function LogoImage({ src, alt }) {
+  return (
+    <div className="relative h-32 sm:h-44 lg:h-56 w-full">
+      <Image src={encodeURI(src)} alt={alt} fill className="object-contain" />
+    </div>
   );
 }
 
@@ -110,7 +128,7 @@ function ScriptConsultantContent() {
     },
   ];
 
-  const outro = <p key="p16">I have worked with the following:</p>;
+  const outro = <p key="p16" className="mt-4 lg:mt-16">I have worked with the following:</p>;
 
   const imageShadow = theme === 'dark'
     ? { filter: 'drop-shadow(0 4px 6px rgba(255,255,255,0.15))' }
@@ -141,6 +159,12 @@ function ScriptConsultantContent() {
             <ContentImage key={index} {...image} style={imageShadow} />
           ))}
         </div>
+      </div>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 items-center">
+        {LOGOS.map((logo) => (
+          <LogoImage key={logo.src} src={logo.src} alt={logo.alt} />
+        ))}
       </div>
     </div>
   );
