@@ -83,6 +83,18 @@ function ScriptConsultantContent() {
   const intro = [
     <p key="p1">As well as writing and script-editing on shows, I also offer help as a script consultant.</p>,
     <p key="p2">If you&rsquo;re looking for help to improve your script, if you want notes on your live standup show or if you&rsquo;re a production company looking for another pair of eyes on something, let&rsquo;s have a chat.</p>,
+    <p key="p15">
+      Get in touch via the{' '}
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeEhLMvQ0SyAhpLVk_rzo8qSHcUItvvpOGGYTeqWn6NehFsVA/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        google form
+      </a>
+      .
+    </p>,
   ];
 
   const sections = [
@@ -150,18 +162,6 @@ function ScriptConsultantContent() {
           you feedback within seven working days. If you need feedback sooner
           than that because of a deadline, just let me know and I&rsquo;m sure
           we can make that happen.
-        </p>,
-        <p key="p15">
-          Get in touch via the{' '}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeEhLMvQ0SyAhpLVk_rzo8qSHcUItvvpOGGYTeqWn6NehFsVA/viewform?usp=publish-editor"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            google form
-          </a>{' '}
-          if you&rsquo;re interested.
         </p>,
       ],
       image: CONTENT_IMAGES[1],
