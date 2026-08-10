@@ -25,7 +25,8 @@ module.exports = {
         '3xl': '64px',
       },
       colors: {
-        lightPrimary: '#8665ca', 
+        lightPrimary: '#8665ca',
+        lightBackground: '#F5F5F5',
         darkPrimary: '#bda7e2',
         darkSecondary: '#282828',
         lightText: "#FFFFFF",
