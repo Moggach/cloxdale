@@ -20,7 +20,7 @@ const CONTENT_IMAGES = [
     width: 750,
     height: 1334,
     alt: '',
-    caption: 'Me on the set of Friday Night Live. (The one from 2022 not the 80s, I’m far too young.)',
+    caption: "Me on the set of Channel 4's Friday Night Live. (The one from 2022 not the 80s, I’m very young.)",
   },
   {
     src: '/bafta.jpg',
@@ -58,8 +58,8 @@ function ContentImage({ src, width, height, alt = '', className = '', style = un
 
 function Figure({ image, className = '', style = undefined }) {
   return (
-    <figure className="flex flex-col gap-2">
-      <ContentImage {...image} className={className} style={style} />
+    <figure className={`flex flex-col gap-2 ${className}`}>
+      <ContentImage {...image} style={style} />
       {image.caption && (
         <figcaption className="text-sm lg:text-base italic text-center">{image.caption}</figcaption>
       )}
@@ -151,13 +151,24 @@ function ScriptConsultantContent() {
           than that because of a deadline, just let me know and I&rsquo;m sure
           we can make that happen.
         </p>,
-        <p key="p15">Get in touch via the google form if you&rsquo;re interested.</p>,
+        <p key="p15">
+          Get in touch via the{' '}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeEhLMvQ0SyAhpLVk_rzo8qSHcUItvvpOGGYTeqWn6NehFsVA/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            google form
+          </a>{' '}
+          if you&rsquo;re interested.
+        </p>,
       ],
       image: CONTENT_IMAGES[1],
     },
   ];
 
-  const outro = <p key="p16" className="mt-4 lg:mt-16">I have worked with the following:</p>;
+  const outro = 'I have worked with the following:';
 
   const imageShadow = theme === 'dark'
     ? { filter: 'drop-shadow(0 4px 6px rgba(255,255,255,0.15))' }
@@ -180,7 +191,7 @@ function ScriptConsultantContent() {
               <Figure image={section.image} className="lg:hidden" style={imageShadow} />
             </Fragment>
           ))}
-          {outro}
+          <p className="mt-4 lg:hidden">{outro}</p>
         </div>
 
         <div className="hidden lg:flex lg:flex-col lg:justify-between lg:gap-10">
@@ -190,7 +201,9 @@ function ScriptConsultantContent() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 items-center">
+      <p className="hidden lg:block">{outro}</p>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 items-center">
         {LOGOS.map((logo) => (
           <LogoImage key={logo.src} src={logo.src} alt={logo.alt} />
         ))}
