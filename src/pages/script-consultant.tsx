@@ -6,11 +6,29 @@ import Layout from '~/components/Layout';
 import { ScrollProvider } from '~/components/ScrollContext';
 import { ThemeProvider, useTheme } from '~/components/ThemeContext';
 
-const HERO_IMAGE = { src: '/IMG_8280.jpeg', width: 4032, height: 3024, alt: 'Cameron Loxdale' };
+const HERO_IMAGE = {
+  src: '/IMG_8280.jpeg',
+  width: 4032,
+  height: 3024,
+  alt: 'Cameron Loxdale',
+  caption: 'Me giving reassuring notes to a despondent writer',
+};
 
 const CONTENT_IMAGES = [
-  { src: '/fnl.png', width: 750, height: 1334, alt: '' },
-  { src: '/bafta.jpg', width: 3024, height: 4032, alt: '' },
+  {
+    src: '/fnl.png',
+    width: 750,
+    height: 1334,
+    alt: '',
+    caption: 'Me on the set of Friday Night Live. (The one from 2022 not the 80s, I’m far too young.)',
+  },
+  {
+    src: '/bafta.jpg',
+    width: 3024,
+    height: 4032,
+    alt: '',
+    caption: 'Me with TV’s Kat Sadler and her bloody BAFTA',
+  },
 ];
 
 const ALL_IMAGES = [HERO_IMAGE, ...CONTENT_IMAGES];
@@ -35,6 +53,17 @@ function ContentImage({ src, width, height, alt = '', className = '', style = un
       className={`w-full h-auto rounded-md shrink-0 ${className}`}
       style={style}
     />
+  );
+}
+
+function Figure({ image, className = '', style = undefined }) {
+  return (
+    <figure className="flex flex-col gap-2">
+      <ContentImage {...image} className={className} style={style} />
+      {image.caption && (
+        <figcaption className="text-sm lg:text-base italic text-center">{image.caption}</figcaption>
+      )}
+    </figure>
   );
 }
 
@@ -143,12 +172,12 @@ function ScriptConsultantContent() {
       <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40">
         <div className="flex flex-col gap-20">
           {intro}
-          <ContentImage {...HERO_IMAGE} className="lg:hidden" style={imageShadow} />
+          <Figure image={HERO_IMAGE} className="lg:hidden" style={imageShadow} />
           {sections.map((section, index) => (
             <Fragment key={index}>
               {section.heading}
               {section.text}
-              <ContentImage {...section.image} className="lg:hidden" style={imageShadow} />
+              <Figure image={section.image} className="lg:hidden" style={imageShadow} />
             </Fragment>
           ))}
           {outro}
@@ -156,7 +185,7 @@ function ScriptConsultantContent() {
 
         <div className="hidden lg:flex lg:flex-col lg:justify-between lg:gap-10">
           {ALL_IMAGES.map((image, index) => (
-            <ContentImage key={index} {...image} style={imageShadow} />
+            <Figure key={index} image={image} style={imageShadow} />
           ))}
         </div>
       </div>
