@@ -33,77 +33,88 @@ function ScriptConsultantContent() {
   const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
   const textColor = theme === 'dark' ? 'text-darkText' : 'text-lightText';
 
-  const paragraphs = [
+  const intro = [
     <p key="p1">As well as writing and script-editing on shows, I also offer help as a script consultant.</p>,
     <p key="p2">If you&rsquo;re looking for help to improve your script, if you want notes on your live standup show or if you&rsquo;re a production company looking for another pair of eyes on something, let&rsquo;s have a chat.</p>,
-    <p key="p3" className="text-xl font-black">Who the hell are you and why should I pay you money to read my script?</p>,
-    <p key="p4">Ok, no need to be quite so aggressive.</p>,
-    <p key="p5">
-      I have loads of experience of working with writers to make their
-      scripts better: I script-edit sitcoms, sketch shows and panel
-      shows for TV and radio. I have also worked on feature film
-      scripts for production companies and collaborated with
-      comedians on everything from TikToks to full Edinburgh shows.
-    </p>,
-    <p key="p6">
-      As a writer I have written narrative comedy and drama for TV
-      and radio. In my time I have received brilliant, thoughtful,
-      energising notes and I&rsquo;ve also received vague, confusing,
-      torturous notes and I know exactly how hard it can be to
-      understand and follow up on this kind of feedback.
-    </p>,
-    <p key="p7">
-      I like to help the writer realise the best version of their idea.
-      Looking at characters, dialogue and structure in a way that brings
-      out what is already working well while clarifying anything that
-      isn&rsquo;t quite there yet. All notes are offered as helpful
-      suggestions and I try to offer practical example solutions to
-      problems - if they inspire you to think of a better solution than
-      I&rsquo;ve come up with, then that&rsquo;s the best kind of note.
-    </p>,
-    <p key="p8">
-      If I have one goal with notes it&rsquo;s to make the writer excited
-      and motivated to get stuck into their next draft.
-    </p>,
-    <p key="p9" className="text-xl font-black">And you&rsquo;re doing all this out of the goodness of your heart?</p>,
-    <p key="p10">
-      No, I will need a bit of money. I offer detailed written notes and
-      also offer an additional chat on a zoom call if you want to discuss
-      further. My standard rates are:
-    </p>,
-    <ul key="p11" className="flex flex-col gap-2 list-disc pl-5">
-      <li>TV half hour script (up to 35 pages) - £99</li>
-      <li>TV hour script (up to 65 pages) - £189</li>
-      <li>Feature length film script (up to 120 pages) - £299</li>
-      <li>Additional 60 minute zoom to discuss your script* - £50</li>
-    </ul>,
-    <p key="p12" className="text-sm italic">
-      *note that this zoom can&rsquo;t be purchased individually as
-      I&rsquo;ll have to read and make notes on the script before
-      discussing it.
-    </p>,
-    <p key="p13">
-      If your project doesn&rsquo;t fall into these categories or
-      you&rsquo;re looking for a different kind of consultancy, send me a
-      message and we can discuss.
-    </p>,
-    <p key="p14">
-      I will invoice before reading the script so you know exactly what
-      you are paying and once payment is received I will be able to send
-      you feedback within seven working days. If you need feedback sooner
-      than that because of a deadline, just let me know and I&rsquo;m sure
-      we can make that happen.
-    </p>,
-    <p key="p15">Get in touch via the google form if you&rsquo;re interested.</p>,
-    <p key="p16">I have worked with the following:</p>,
   ];
+
+  const sections = [
+    {
+      heading: <p key="p3" className="text-xl font-black">Who the hell are you and why should I pay you money to read my script?</p>,
+      text: [
+        <p key="p4">Ok, no need to be quite so aggressive.</p>,
+        <p key="p5">
+          I have loads of experience of working with writers to make their
+          scripts better: I script-edit sitcoms, sketch shows and panel
+          shows for TV and radio. I have also worked on feature film
+          scripts for production companies and collaborated with
+          comedians on everything from TikToks to full Edinburgh shows.
+        </p>,
+        <p key="p6">
+          As a writer I have written narrative comedy and drama for TV
+          and radio. In my time I have received brilliant, thoughtful,
+          energising notes and I&rsquo;ve also received vague, confusing,
+          torturous notes and I know exactly how hard it can be to
+          understand and follow up on this kind of feedback.
+        </p>,
+        <p key="p7">
+          I like to help the writer realise the best version of their idea.
+          Looking at characters, dialogue and structure in a way that brings
+          out what is already working well while clarifying anything that
+          isn&rsquo;t quite there yet. All notes are offered as helpful
+          suggestions and I try to offer practical example solutions to
+          problems - if they inspire you to think of a better solution than
+          I&rsquo;ve come up with, then that&rsquo;s the best kind of note.
+        </p>,
+        <p key="p8">
+          If I have one goal with notes it&rsquo;s to make the writer excited
+          and motivated to get stuck into their next draft.
+        </p>,
+      ],
+      image: CONTENT_IMAGES[0],
+    },
+    {
+      heading: <p key="p9" className="text-xl font-black">And you&rsquo;re doing all this out of the goodness of your heart?</p>,
+      text: [
+        <p key="p10">
+          No, I will need a bit of money. I offer detailed written notes and
+          also offer an additional chat on a zoom call if you want to discuss
+          further. My standard rates are:
+        </p>,
+        <ul key="p11" className="flex flex-col gap-2 list-disc pl-5">
+          <li>TV half hour script (up to 35 pages) - £99</li>
+          <li>TV hour script (up to 65 pages) - £189</li>
+          <li>Feature length film script (up to 120 pages) - £299</li>
+          <li>Additional 60 minute zoom to discuss your script* - £50</li>
+        </ul>,
+        <p key="p12" className="text-sm italic">
+          *note that this zoom can&rsquo;t be purchased individually as
+          I&rsquo;ll have to read and make notes on the script before
+          discussing it.
+        </p>,
+        <p key="p13">
+          If your project doesn&rsquo;t fall into these categories or
+          you&rsquo;re looking for a different kind of consultancy, send me a
+          message and we can discuss.
+        </p>,
+        <p key="p14">
+          I will invoice before reading the script so you know exactly what
+          you are paying and once payment is received I will be able to send
+          you feedback within seven working days. If you need feedback sooner
+          than that because of a deadline, just let me know and I&rsquo;m sure
+          we can make that happen.
+        </p>,
+        <p key="p15">Get in touch via the google form if you&rsquo;re interested.</p>,
+      ],
+      image: CONTENT_IMAGES[1],
+    },
+  ];
+
+  const outro = <p key="p16">I have worked with the following:</p>;
 
   const imageShadow = theme === 'dark'
     ? { filter: 'drop-shadow(0 4px 6px rgba(255,255,255,0.15))' }
     : { filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.25))' };
-
-  const imageCount = CONTENT_IMAGES.length;
-  const insertEvery = Math.ceil(paragraphs.length / (imageCount + 1));
 
   return (
     <div className="flex flex-col gap-20 font-karla text-base max-w-2xl lg:max-w-6xl">
@@ -113,17 +124,16 @@ function ScriptConsultantContent() {
 
       <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40">
         <div className="flex flex-col gap-20">
+          {intro}
           <ContentImage {...HERO_IMAGE} className="lg:hidden" style={imageShadow} />
-          {paragraphs.map((paragraph, index) => {
-            const showMobileImage = index > 0 && index < paragraphs.length - 1 && index % insertEvery === 0;
-            const image = CONTENT_IMAGES[Math.floor(index / insertEvery) - 1];
-            return (
-              <Fragment key={index}>
-                {paragraph}
-                {showMobileImage && <ContentImage {...image} className="lg:hidden" style={imageShadow} />}
-              </Fragment>
-            );
-          })}
+          {sections.map((section, index) => (
+            <Fragment key={index}>
+              {section.heading}
+              {section.text}
+              <ContentImage {...section.image} className="lg:hidden" style={imageShadow} />
+            </Fragment>
+          ))}
+          {outro}
         </div>
 
         <div className="hidden lg:flex lg:flex-col lg:justify-between lg:gap-10">
