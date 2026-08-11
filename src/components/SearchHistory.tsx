@@ -40,14 +40,6 @@ const searchSets = [
     { text: "Bill if you're reading this, what the hell is going on" },
   ],
   [
-    { text: 'Forum for adult men who are bullied by teenagers at bus stops' },
-    { text: 'How to get big arms' },
-    { text: 'How to get big arms without exercise' },
-    { text: 'Arms next day delivery' },
-    { text: 'Arms (not weapons) next day delivery' },
-    { text: 'Prosthetic biceps to fool mean teens' },
-  ],
-  [
     { text: 'Cameron Loxdale' },
     { text: 'Cameron Loxdale comedy' },
     { text: 'Cameron Loxdale hilarious' },
@@ -60,15 +52,60 @@ const searchSets = [
     { text: "How to stop my guards turning against me once money means nothing" },
   ],
   [
-    { text: "What was the Dance Dance Revolution?" },
-    { text: "Did they have other policies besides dancing?" },
-    { text: "Dance Dance Revolution number of casualties" },
-  ],
-  [
     { text: "Is anyone from the 'Live Kenan and Kel studio audience' still alive?" },
     { text: "Is it a live studio audience if they're all dead now?" },
     { text: "Are we listening to the laughter of ghosts?" },
-    { text: "Kel's Orange Soda UK delivery" },
+  ],
+  [
+    { text: 'how to play duck duck doose' },
+    { text: 'best duck duck goose strategy' },
+    { text: 'how to stop being goosed ever' },
+    { text: 'duck duck goose blackbelt requirements' },
+    { text: '14 week DDG retreat' },
+    { text: 'competitive DDG swansea' },
+    { text: 'are performance enhancing drugs allowed in DDG' },
+    { text: 'dark web' },
+    { text: 'industrial strength steroids' },
+  ],
+  [
+    { text: 'penis enlargement pill for a friend' },
+    { text: 'should erection last 72 hours for a friend' },
+    { text: 'opposite of viagra for a friend' },
+    { text: 'guillotine same day delivery' },
+  ],
+  [
+    { text: 'card game Happy Families' },
+    { text: 'online Happy Families' },
+    { text: 'online Happy Families High Stakes' },
+    { text: 'empty natwest account' },
+    { text: 'natwest customer support' },
+    { text: 'how to play happy families' },
+  ],
+  [
+    { text: 'did the black eyed peas ever find where the love was in the end?' },
+  ],
+  [
+    { text: 'change takeaway delivery driver' },
+    { text: 'takeaway without weird driver' },
+    { text: 'takeaway driver moustache eating prawn crackers then pays me' },
+    { text: 'same takeaway driver 4 times 80 years old crop top' },
+    { text: "'mmmm that's good crackers' shouted through keyhole" },
+    { text: 'driver arriving despite no order made' },
+  ],
+  [
+    { text: 'neighbour keeping big horse in flat' },
+    { text: 'neighbour keeping big horse in flat 4th floor' },
+    { text: 'neighbour riding big horse on stairs' },
+    { text: 'Rightmove' },
+  ],
+  [
+    { text: 'how to be more assertive but no worries if not' },
+  ],
+  [
+    { text: "why can't goofy take mask off Disneyland" },
+    { text: 'does mask contain goofy soul' },
+    { text: 'are we all wearing masks' },
+    { text: 'are we all goofy' },
   ],
 ];
 
