@@ -33,6 +33,26 @@ const CONTENT_IMAGES = [
 
 const ALL_IMAGES = [HERO_IMAGE, ...CONTENT_IMAGES];
 
+const TESTIMONIALS = [
+  {
+    quote:
+      'Cameron’s work as script-editor and chief gagsmith on What Just Happened? is invaluable - he’s a wonderful presence in the writers room, intelligent and silly in equal measure and I genuinely fear for the day when he calls in sick. So much so that I secretly poison him with ginger shots and multi-vitamins throughout the production. He thinks it’s just coffee. Oh no Cameron. It’s so much more than that, you talented, stupid idiot.',
+    name: 'Robin Morgan',
+    role: 'Mock The Week, The News Quiz, host of What Just Happened',
+  },
+  {
+    quote:
+      'Everything I’ve ever shown Cameron has been greatly improved by his world-class notes. He makes every script stronger, every idea clearer, and every joke funnier.',
+    name: 'Dan Kiss',
+    role: 'writer for Mock The Week, host of The Big Quandaries Podcast',
+  },
+  {
+    quote: 'Do not use him he’s MINE.',
+    name: 'Kat Sadler',
+    role: 'Such Brave Girls',
+  },
+];
+
 const LOGOS = [
   { src: '/logos/BBC Studios Comedy logo.png', alt: 'BBC Studios Comedy', width: 225, height: 225 },
   { src: '/logos/VAL logo.jpg', alt: 'Various Artists Limited', width: 711, height: 319 },
@@ -67,6 +87,18 @@ function Figure({ image, className = '', style = undefined }) {
   );
 }
 
+function Testimonial({ quote, name, role, borderColor }) {
+  return (
+    <figure className={`flex flex-col gap-4 border-l-4 pl-6 ${borderColor}`}>
+      <blockquote className="italic">&ldquo;{quote}&rdquo;</blockquote>
+      <figcaption>
+        <span className="font-black not-italic">{name}</span>
+        {role && <span className="block text-sm">{role}</span>}
+      </figcaption>
+    </figure>
+  );
+}
+
 function LogoImage({ src, alt }) {
   return (
     <div className="relative h-32 sm:h-44 lg:h-56 w-full">
@@ -79,6 +111,7 @@ function ScriptConsultantContent() {
   const { theme } = useTheme();
   const bgColor = theme === 'dark' ? 'bg-darkPrimary' : 'bg-lightPrimary';
   const textColor = theme === 'dark' ? 'text-darkText' : 'text-lightText';
+  const borderColor = theme === 'dark' ? 'border-darkPrimary' : 'border-lightPrimary';
 
   const intro = [
     <p key="p1">As well as writing and script-editing on shows, I also offer help as a script consultant.</p>,
@@ -180,7 +213,7 @@ function ScriptConsultantContent() {
 
       <h1 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h1>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40 mb-10">
         <div className="flex flex-col gap-20">
           {intro}
           <Figure image={HERO_IMAGE} className="lg:hidden" style={imageShadow} />
@@ -191,17 +224,27 @@ function ScriptConsultantContent() {
               <Figure image={section.image} className="lg:hidden" style={imageShadow} />
             </Fragment>
           ))}
-          <p className="mt-4 lg:hidden">{outro}</p>
         </div>
 
         <div className="hidden lg:flex lg:flex-col lg:justify-between lg:gap-10">
           {ALL_IMAGES.map((image, index) => (
-            <Figure key={index} image={image} style={imageShadow} />
+            <Figure key={index} image={image} style={imageShadow} className="lg:max-w-xs lg:mx-auto" />
           ))}
         </div>
       </div>
 
-      <p className="hidden lg:block">{outro}</p>
+      <div className="flex flex-col gap-10 mb-10">
+        <h2 className={`font-gogh text-lg p-3 w-content rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}>
+          TESTIMONIALS
+        </h2>
+        <div className="flex flex-col gap-10">
+          {TESTIMONIALS.map((testimonial) => (
+            <Testimonial key={testimonial.name} {...testimonial} borderColor={borderColor} />
+          ))}
+        </div>
+      </div>
+
+      <p>{outro}</p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 items-center">
         {LOGOS.map((logo) => (
