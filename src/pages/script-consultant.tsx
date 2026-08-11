@@ -122,7 +122,7 @@ function ScriptConsultantContent() {
         href="https://docs.google.com/forms/d/e/1FAIpQLSeEhLMvQ0SyAhpLVk_rzo8qSHcUItvvpOGGYTeqWn6NehFsVA/viewform?usp=publish-editor"
         target="_blank"
         rel="noopener noreferrer"
-        className="underline"
+        className={`underline inline-block transition-all duration-200 hover:text-2xl ${theme === 'dark' ? 'text-darkPrimary' : 'text-lightPrimary'}`}
       >
         google form
       </a>
