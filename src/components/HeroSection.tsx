@@ -12,7 +12,7 @@ const HeroSection = ({ section }) => {
 
   return (
     <>
-    <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-40 font-karla text-base ">
+    <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-40 font-fira text-base ">
       <div className="basis-1/2 text-center">
         {section[0].body.map((block, blockIndex) => {
           return (

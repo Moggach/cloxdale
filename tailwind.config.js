@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        gogh: ['Gogh', 'sans'], 
-        karla: ['Karla', 'sans-serif'], 
+        gogh: ['Gogh', 'sans'],
+        fira: ['var(--font-fira-sans)', 'sans-serif'],
       },
       spacing: {
         '20': '20px',

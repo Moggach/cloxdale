@@ -160,7 +160,7 @@ const SearchHistory = () => {
           >
            <div className='flex items-baseline gap-4'>
              <span className='font-mono text-sm opacity-60 shrink-0'>{timestamps[index]}</span>
-             <span className='font-karla text-base'>
+             <span className='font-fira text-base'>
                <TypewriterText
                  text={item.text}
                  isVisible={index === currentIndex}

@@ -208,7 +208,7 @@ function ScriptConsultantContent() {
     : { filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.25))' };
 
   return (
-    <div className="flex flex-col gap-20 font-karla text-base max-w-2xl lg:max-w-6xl">
+    <div className="flex flex-col gap-20 font-fira text-base max-w-2xl lg:max-w-6xl">
       <Link href="/">&larr; Back to home</Link>
 
       <h1 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h1>

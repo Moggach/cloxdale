@@ -1,7 +1,7 @@
 import '~/styles/global.css'
 
 import type { AppProps } from 'next/app'
-import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
+import { Fira_Sans, IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
 import { lazy } from 'react'
 
 export interface SharedPageProps {
@@ -30,6 +30,13 @@ const serif = PT_Serif({
   weight: ['400', '700'],
 })
 
+const fira = Fira_Sans({
+  variable: '--font-fira-sans',
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '900'],
+})
+
 export default function App({
   Component,
   pageProps,
@@ -43,6 +50,7 @@ export default function App({
             --font-family-sans: ${sans.style.fontFamily};
             --font-family-serif: ${serif.style.fontFamily};
             --font-family-mono: ${mono.style.fontFamily};
+            --font-fira-sans: ${fira.style.fontFamily};
           }
         `}
       </style>
