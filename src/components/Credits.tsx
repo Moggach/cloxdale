@@ -32,26 +32,47 @@ const Credits = ({ credit }) => {
                         const shadowStyle = theme === 'dark'
                             ? { filter: 'drop-shadow(0 4px 6px rgba(255,255,255,0.15))' }
                             : { filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.25))' };
-                        return (
-                        <div key={index} className="flex flex-col gap-3 group" style={shadowStyle}>
-                            <div className="relative h-32 md:h-48 w-full">
-                                <Image
-                                    src={urlForImage(credit.image)?.width(600).url()}
-                                    fill
-                                    alt=""
-                                    className="object-contain"
-                                />
-                            </div>
-                            {credit.excerpt.map((block) => (
-                                <div key={block._key}>
-                                    {block.children.map((child) => (
-                                        <span className="font-fira text-md" key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
-                                            {child.text}
-                                        </span>
-                                    ))}
+                        const content = (
+                            <>
+                                <div className="relative h-32 md:h-48 w-full overflow-hidden">
+                                    <Image
+                                        src={urlForImage(credit.image)?.width(600).url()}
+                                        fill
+                                        alt=""
+                                        className={`object-contain transition-transform duration-200 ${credit.externalLink ? 'group-hover:scale-105' : ''}`}
+                                    />
                                 </div>
-                            ))}
-                        </div>
+                                {credit.excerpt.map((block) => (
+                                    <div key={block._key}>
+                                        {block.children.map((child) => (
+                                            <span className="font-fira text-md" key={child._key} style={child.marks.includes('strong') ? { fontWeight: 'bold' } : {}}>
+                                                {child.text}
+                                            </span>
+                                        ))}
+                                    </div>
+                                ))}
+                            </>
+                        );
+
+                        if (credit.externalLink) {
+                            return (
+                                <a
+                                    key={index}
+                                    href={credit.externalLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col gap-3 group"
+                                    style={shadowStyle}
+                                >
+                                    {content}
+                                </a>
+                            );
+                        }
+
+                        return (
+                            <div key={index} className="flex flex-col gap-3 group" style={shadowStyle}>
+                                {content}
+                            </div>
                         );
                     })}
                 </div>
