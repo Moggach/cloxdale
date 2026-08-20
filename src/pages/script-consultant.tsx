@@ -121,7 +121,7 @@ function ScriptConsultantContent() {
 
   const intro = [
     <p key="p1">As well as writing and script-editing on shows, I also offer help as a script consultant.</p>,
-    <p key="p2">If you&rsquo;re looking for help to improve your script, if you want notes on your live standup show or if you&rsquo;re a production company looking for another pair of eyes on something, let&rsquo;s have a chat.</p>,
+    <p key="p2">If you&rsquo;re looking for help to improve your script, if you want notes on your standup or if you&rsquo;re just looking for another pair of eyes on something, let&rsquo;s have a chat.</p>,
     <p key="p15">
       Get in touch via the{' '}
       <a
@@ -149,20 +149,18 @@ function ScriptConsultantContent() {
           comedians on everything from TikToks to full Edinburgh shows.
         </p>,
         <p key="p6">
-          As a writer I have written narrative comedy and drama for TV
-          and radio. In my time I have received brilliant, thoughtful,
-          energising notes and I&rsquo;ve also received vague, confusing,
-          torturous notes and I know exactly how hard it can be to
-          understand and follow up on this kind of feedback.
+          As a writer I have written narrative
+          comedy and drama for TV and radio. In my time I have received brilliant, thoughtful, energising notes and I&rsquo;ve also received vague, confusing, torturous, unactionable notes and I know exactly how hard it can be to understand and follow up on this kind of feedback.
         </p>,
         <p key="p7">
           I like to help the writer realise the best version of their idea.
           Looking at characters, dialogue and structure in a way that brings
           out what is already working well while clarifying anything that
           isn&rsquo;t quite there yet. All notes are offered as helpful
-          suggestions and I try to offer practical example solutions to
-          problems - if they inspire you to think of a better solution than
-          I&rsquo;ve come up with, then that&rsquo;s the best kind of note.
+          suggestions as opposed to commands and I try to offer practical
+          example solutions to problems - if they inspire you to think of
+          a better solution than I&rsquo;ve come up with, then that&rsquo;s
+          the best kind of note.
         </p>,
         <p key="p8">
           If I have one goal with notes it&rsquo;s to make the writer excited
@@ -177,7 +175,7 @@ function ScriptConsultantContent() {
         <p key="p10">
           No, I will need a bit of money. I offer detailed written notes and
           also offer an additional chat on a zoom call if you want to discuss
-          further. My standard rates are:
+          further after the notes have been received. My standard rates are:
         </p>,
         <ul key="p11" className="flex flex-col gap-2 list-disc pl-5">
           <li>TV half hour script (up to 35 pages) - £99</li>
