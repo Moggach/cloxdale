@@ -35,6 +35,11 @@ const ALL_IMAGES = [HERO_IMAGE, ...CONTENT_IMAGES];
 
 const TESTIMONIALS = [
   {
+    quote: 'Do not use him he’s MINE.',
+    name: 'Kat Sadler',
+    role: 'Such Brave Girls',
+  },
+  {
     quote:
       'Cameron’s work as script-editor and chief gagsmith on What Just Happened? is invaluable - he’s a wonderful presence in the writers room, intelligent and silly in equal measure and I genuinely fear for the day when he calls in sick. So much so that I secretly poison him with ginger shots and multi-vitamins throughout the production. He thinks it’s just coffee. Oh no Cameron. It’s so much more than that, you talented, stupid idiot.',
     name: 'Robin Morgan',
@@ -42,14 +47,15 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      'Everything I’ve ever shown Cameron has been greatly improved by his world-class notes. He makes every script stronger, every idea clearer, and every joke funnier.',
-    name: 'Dan Kiss',
-    role: 'writer for Mock The Week, host of The Big Quandaries Podcast',
+      'Cameron is literally one of the first people I turn to for feedback on my work. If you’re looking for friendly, supportive notes with joke pitches and astute nudges in the right direction, I can’t recommend him highly enough — but also hope this doesn’t take up all of his capacity??',
+    name: 'Hari Kanth',
+    role: 'SNL UK, Sketchburn',
   },
   {
-    quote: 'Do not use him he’s MINE.',
-    name: 'Kat Sadler',
-    role: 'Such Brave Girls',
+    quote:
+      'Everything I’ve ever shown Cameron has been greatly improved by his world-class notes. He makes every script stronger, every idea clearer, and every joke funnier.',
+    name: 'Dan Kiss',
+    role: "sitcom writer (It's Not A Cult; Pen Pals for BBC Radio Wales) and writer for Mock The Week",
   },
 ];
 
