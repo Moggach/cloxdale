@@ -68,12 +68,6 @@ const searchSets = [
     { text: 'industrial strength steroids' },
   ],
   [
-    { text: 'penis enlargement pill for a friend' },
-    { text: 'should erection last 72 hours for a friend' },
-    { text: 'opposite of viagra for a friend' },
-    { text: 'guillotine same day delivery' },
-  ],
-  [
     { text: 'card game Happy Families' },
     { text: 'online Happy Families' },
     { text: 'online Happy Families High Stakes' },
