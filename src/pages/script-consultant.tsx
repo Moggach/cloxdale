@@ -183,13 +183,8 @@ function ScriptConsultantContent() {
           <li>TV half hour script (up to 35 pages) - £99</li>
           <li>TV hour script (up to 65 pages) - £189</li>
           <li>Feature length film script (up to 120 pages) - £299</li>
-          <li>Additional 60 minute zoom to discuss your script* - £50</li>
+          <li>Additional 60 minute zoom to discuss your script - £50</li>
         </ul>,
-        <p key="p12" className="text-sm italic">
-          *note that this zoom can&rsquo;t be purchased individually as
-          I&rsquo;ll have to read and make notes on the script before
-          discussing it.
-        </p>,
         <p key="p13">
           If your project doesn&rsquo;t fall into these categories or
           you&rsquo;re looking for a different kind of consultancy, send me a
