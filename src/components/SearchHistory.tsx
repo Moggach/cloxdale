@@ -57,7 +57,7 @@ const searchSets = [
     { text: "Are we listening to the laughter of ghosts?" },
   ],
   [
-    { text: 'how to play duck duck doose' },
+    { text: 'how to play duck duck goose' },
     { text: 'best duck duck goose strategy' },
     { text: 'how to stop being goosed ever' },
     { text: 'duck duck goose blackbelt requirements' },
