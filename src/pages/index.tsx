@@ -5,11 +5,9 @@ import { getClient } from '~/lib/sanity.client'
 import type { SharedPageProps } from '~/pages/_app'
 import type { heroSection } from '~/lib/sanity.queries'
 import type { Credit } from '~/lib/sanity.queries'
-import type { Contact } from '~/lib/sanity.queries'
 import type { searchItem } from '~/lib/sanity.queries'
 import HeroSection from '~/components/HeroSection'
 import Credits from '~/components/Credits'
-import Contacts from '~/components/Contacts'
 import SearchHistory from '~/components/SearchHistory'
 import ScrollToHash from '~/components/ScrollToHash';
 import { ScrollProvider } from '~/components/ScrollContext';
@@ -24,7 +22,6 @@ export const getStaticProps: GetStaticProps<
   SharedPageProps & {
     section: heroSection[]
     credits: Credit[]
-    contacts: Contact[]
     searchItem: searchItem[]
   }
 
@@ -32,7 +29,6 @@ export const getStaticProps: GetStaticProps<
   const client = getClient(draftMode ? { token: readToken } : undefined)
   const section = await client.fetch(`*[_type == "heroSection"]`)
   const credits = await client.fetch(`*[_type == "credit"] | order(order asc)`)
-  const contacts = await client.fetch(`*[_type == "contact"]`)
   const searchItem = await client.fetch(`*[_type == "searchItem"] | order(createdAt desc)`)
 
 
@@ -42,7 +38,6 @@ export const getStaticProps: GetStaticProps<
       token: draftMode ? readToken : '',
       section,
       credits,
-      contacts,
       searchItem
 
     },
@@ -54,7 +49,6 @@ export default function IndexPage(
 ) {
   const section = props.section
   const credits = props.credits
-  const contacts = props.contacts
   const searchItem = props.searchItem
 
 
@@ -70,7 +64,6 @@ export default function IndexPage(
         <Layout>
           <HeroSection section={section} />
           <Credits credit={credits} />
-          <Contacts contacts={contacts} />
           <SearchHistory />
           <ScrollToHash />
         </Layout>

@@ -56,10 +56,6 @@ const Header = forwardRef((props, ref) => {
             <li className=''>
               <Link href="/script-consultant">Script Consultant</Link>
             </li>
-            <hr className="w-px h-6 border-0 bg-current self-center" />
-            <li className=''>
-              <SmoothScrollLink to="#contacts" offset={SCROLL_OFFSET}>Contact</SmoothScrollLink>
-            </li>
           </ul>
           <div onClick={toggleDropdown} className="cursor-pointer ml-4 z-50">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
