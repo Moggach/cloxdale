@@ -149,18 +149,19 @@ function ScriptConsultantContent() {
           comedians on everything from TikToks to full Edinburgh shows.
         </p>,
         <p key="p6">
-          As a writer I have written narrative
-          comedy and drama for TV and radio. In my time I have received brilliant, thoughtful, energising notes and I&rsquo;ve also received vague, confusing, torturous, unactionable notes and I know exactly how hard it can be to understand and follow up on this kind of feedback.
+          As a writer I have written narrative comedy and drama for TV and
+          radio. In my time I have received brilliant, thoughtful,
+          energising notes and I&rsquo;ve also received vague, confusing,
+          torturous, unactionable notes and I know exactly how hard it can
+          be to understand and follow up on this kind of feedback.
         </p>,
         <p key="p7">
           I like to help the writer realise the best version of their idea.
-          Looking at characters, dialogue and structure in a way that brings
-          out what is already working well while clarifying anything that
-          isn&rsquo;t quite there yet. All notes are offered as helpful
-          suggestions as opposed to commands and I try to offer practical
-          example solutions to problems - if they inspire you to think of
-          a better solution than I&rsquo;ve come up with, then that&rsquo;s
-          the best kind of note.
+          I look at characters, dialogue and structure to see what is
+          already working well while clarifying anything that isn&rsquo;t
+          quite there yet. I try to offer practical example solutions to
+          problems - if they inspire you to think of a better solution than
+          I&rsquo;ve come up with, then that&rsquo;s the ideal kind of note.
         </p>,
         <p key="p8">
           If I have one goal with notes it&rsquo;s to make the writer excited
