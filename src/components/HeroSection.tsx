@@ -41,7 +41,7 @@ const HeroSection = ({ section }) => {
         })}
 
         <div ref={sectionRef} id="contacts" className="mt-8 flex flex-col gap-5">
-          <h2 className={`font-gogh text-lg p-3 w-content rounded-sm -rotate-3 inline-block ${bgColor} ${textColor}`}>CONTACT ME</h2>
+          <h2 className={`font-gogh text-lg p-3 w-content rounded-sm rotate-3 inline-block ${bgColor} ${textColor}`}>CONTACT ME</h2>
           <div className="flex flex-col gap-3 border-l-2 border-lightPrimary pl-4">
             <div className="font-fira text-base">You are well within your rights to <a className="text-lightPrimary underline underline-offset-4 decoration-lightPrimary/50 hover:decoration-lightPrimary transition-colors" href="mailto:cameronloxdale@yahoo.co.uk?subject=Let%27s%20talk%20turkey">contact me</a></div>
             <div className="font-fira text-base">Or you can go directly to my agent Georgia Kanner at Independent Talent on this <a className="text-lightPrimary underline underline-offset-4 decoration-lightPrimary/50 hover:decoration-lightPrimary transition-colors" href="mailto:georgiakanner@independenttalent.com">email</a></div>
