@@ -222,7 +222,7 @@ function ScriptConsultantContent() {
 
         <div className="hidden lg:flex lg:flex-col lg:justify-between lg:gap-10">
           {ALL_IMAGES.map((image, index) => (
-            <Figure key={index} image={image} style={imageShadow} className="lg:max-w-xs lg:mx-auto" />
+            <Figure key={index} image={image} style={imageShadow} className="lg:max-w-[280px] lg:mx-auto" />
           ))}
         </div>
       </div>
