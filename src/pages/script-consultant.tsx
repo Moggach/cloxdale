@@ -189,13 +189,7 @@ function ScriptConsultantContent() {
           you&rsquo;re looking for a different kind of consultancy, send me a
           message and we can discuss.
         </p>,
-        <p key="p14">
-          I will invoice before reading the script so you know exactly what
-          you are paying and once payment is received I will be able to send
-          you feedback within seven working days. If you need feedback sooner
-          than that because of a deadline, just let me know and I&rsquo;m sure
-          we can make that happen.
-        </p>,
+    
       ],
       image: CONTENT_IMAGES[1],
     },
