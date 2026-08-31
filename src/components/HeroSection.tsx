@@ -13,7 +13,7 @@ const HeroSection = ({ section }) => {
   return (
     <>
     <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-40 font-fira text-base ">
-      <div className="basis-1/2 text-center">
+      <div className="basis-1/2">
         {section[0].body.map((block, blockIndex) => {
           return (
             <div key={block._key} style={{ margin: '10px 0', ...(blockIndex === 0 ? { marginBottom: '24px' } : {}) }}>
