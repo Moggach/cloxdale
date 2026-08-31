@@ -3,6 +3,7 @@ import '~/styles/global.css'
 import type { AppProps } from 'next/app'
 import { Fira_Sans, IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
 import { lazy } from 'react'
+import { ThemeProvider } from '~/components/ThemeContext'
 
 export interface SharedPageProps {
   draftMode: boolean
@@ -54,13 +55,15 @@ export default function App({
           }
         `}
       </style>
-      {draftMode ? (
-        <PreviewProvider token={token}>
+      <ThemeProvider>
+        {draftMode ? (
+          <PreviewProvider token={token}>
+            <Component {...pageProps} />
+          </PreviewProvider>
+        ) : (
           <Component {...pageProps} />
-        </PreviewProvider>
-      ) : (
-        <Component {...pageProps} />
-      )}
+        )}
+      </ThemeProvider>
     </>
   )
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '~/components/Layout';
 import { ScrollProvider } from '~/components/ScrollContext';
-import { ThemeProvider, useTheme } from '~/components/ThemeContext';
+import { useTheme } from '~/components/ThemeContext';
 
 const HERO_IMAGE = {
   src: '/IMG_8280.jpeg',
@@ -261,13 +261,11 @@ export default function ScriptConsultantPage() {
         <title>Script Consultant | Cameron Loxdale</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ThemeProvider>
-        <ScrollProvider>
-          <Layout>
-            <ScriptConsultantContent />
-          </Layout>
-        </ScrollProvider>
-      </ThemeProvider>
+      <ScrollProvider>
+        <Layout>
+          <ScriptConsultantContent />
+        </Layout>
+      </ScrollProvider>
     </>
   );
 }

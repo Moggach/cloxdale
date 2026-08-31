@@ -13,7 +13,6 @@ import Contacts from '~/components/Contacts'
 import SearchHistory from '~/components/SearchHistory'
 import ScrollToHash from '~/components/ScrollToHash';
 import { ScrollProvider } from '~/components/ScrollContext';
-import { ThemeProvider } from '~/components/ThemeContext';
 import Head from 'next/head';
 
 
@@ -67,17 +66,15 @@ export default function IndexPage(
         <title>Cameron Loxdale</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ThemeProvider>
-        <ScrollProvider>
-          <Layout>
-            <HeroSection section={section} />
-            <Credits credit={credits} />
-            <Contacts contacts={contacts} />
-            <SearchHistory />
-            <ScrollToHash />
-          </Layout>
-        </ScrollProvider>
-      </ThemeProvider>
+      <ScrollProvider>
+        <Layout>
+          <HeroSection section={section} />
+          <Credits credit={credits} />
+          <Contacts contacts={contacts} />
+          <SearchHistory />
+          <ScrollToHash />
+        </Layout>
+      </ScrollProvider>
 
     </>
 

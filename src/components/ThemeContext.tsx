@@ -1,19 +1,31 @@
 import React from 'react';
 
+const THEME_STORAGE_KEY = 'theme';
+
 const ThemeContext = React.createContext({
   theme: 'light', // Default theme
-  setLightTheme: () => {}, 
+  setLightTheme: () => {},
   setDarkTheme: () => {},
-  setTooDarkTheme: () => {} 
+  setTooDarkTheme: () => {}
 
 });
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = React.useState('light'); // default theme
 
-  const setLightTheme = () => setTheme('light');
-  const setDarkTheme = () => setTheme('dark');
-  const setTooDarkTheme = () => setTheme('tooDark');
+  React.useEffect(() => {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored) setTheme(stored);
+  }, []);
+
+  const updateTheme = (next: string) => {
+    setTheme(next);
+    window.localStorage.setItem(THEME_STORAGE_KEY, next);
+  };
+
+  const setLightTheme = () => updateTheme('light');
+  const setDarkTheme = () => updateTheme('dark');
+  const setTooDarkTheme = () => updateTheme('tooDark');
 
 
   return (
