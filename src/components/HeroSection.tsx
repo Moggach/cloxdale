@@ -49,7 +49,7 @@ const HeroSection = ({ section }) => {
         </div>
       </div>
       <div className="basis-1/2 flex flex-col gap-2">
-        <div className="relative flex-1 min-h-[600px] overflow-hidden">
+        <div className="relative flex-1 min-h-[300px] lg:min-h-[600px] overflow-hidden">
           <Image
             src={urlForImage(section[0].image).url()}
             fill
