@@ -190,7 +190,7 @@ function ScriptConsultantContent() {
           message and we can discuss.
         </p>,
         <p key="p13">
-          This is lower than my professional rate - if you're a professional writer with a show in development with a production company get in touch to discuss rates.
+          This is lower than my professional rate - if you&rsquo;re a professional writer with a show in development with a production company get in touch to discuss rates.
         </p>,
 
       ],
