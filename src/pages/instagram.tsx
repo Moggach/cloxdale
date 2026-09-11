@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import Layout from '~/components/Layout';
 import { ScrollProvider } from '~/components/ScrollContext';
 import { useTheme } from '~/components/ThemeContext';
@@ -14,9 +13,7 @@ function InstagramContent() {
 
   return (
     <div className="flex flex-col gap-20 font-fira text-base max-w-2xl lg:max-w-6xl">
-      <Link href="/">&larr; Back to home</Link>
-
-      <p>I don&rsquo;t have Instagram because I&rsquo;m better than you.</p>
+      <p>Cameron Loxdale does not have Instagram because he is better than you.</p>
 
       <Image
         src="/logos/war_and_peace.jpg"
