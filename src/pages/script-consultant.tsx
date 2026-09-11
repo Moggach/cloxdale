@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import Layout from '~/components/Layout';
 import { ScrollProvider } from '~/components/ScrollContext';
 import { useTheme } from '~/components/ThemeContext';
@@ -206,8 +205,6 @@ function ScriptConsultantContent() {
 
   return (
     <div className="flex flex-col gap-20 font-fira text-base max-w-2xl lg:max-w-6xl">
-      <Link href="/">&larr; Back to home</Link>
-
       <h1 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h1>
 
       <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40 mb-10">
