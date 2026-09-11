@@ -12,17 +12,20 @@ function InstagramContent() {
     : { filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.25))' };
 
   return (
-    <div className="flex flex-col gap-20 font-fira text-base max-w-2xl lg:max-w-6xl">
-      <p className="text-xl font-semibold">Cameron Loxdale does not have Instagram because he is better than you.</p>
-
-      <Image
-        src="/logos/war_and_peace.jpg"
-        width={4284}
-        height={5712}
-        alt="Cameron Loxdale thoughtfully reading War and Peace instead of scrolling Instagram"
-        className="w-full h-auto rounded-md max-w-2xl lg:max-w-4xl mx-auto"
-        style={imageShadow}
-      />
+    <div className="flex flex-col gap-20 font-fira text-base max-w-3xl lg:max-w-6xl">
+      <div className="max-w-3xl lg:max-w-6xl mx-auto flex flex-col gap-6">
+        <p className="text-xl font-semibold">
+          Cameron Loxdale does not have Instagram because he is better than you.
+        </p>
+        <Image
+          src="/logos/war_and_peace.jpg"
+          width={4284}
+          height={5712}
+          alt="Cameron Loxdale thoughtfully reading War and Peace instead of scrolling Instagram"
+          className="w-full h-auto rounded-md"
+          style={imageShadow}
+        />
+      </div>
     </div>
   );
 }
