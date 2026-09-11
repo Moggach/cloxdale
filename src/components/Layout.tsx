@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import dynamic from 'next/dynamic';
 import { useTheme } from '~/components/ThemeContext';
-import Banner from '~/components/Banner'; 
+import Banner from '~/components/Banner';
 
 const ConfettiExplosion = dynamic(() => import('react-confetti-explosion'), { ssr: false });
 
@@ -15,6 +16,7 @@ export default function Layout({ children }) {
   const [headerHeight, setHeaderHeight] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
   const headerRef = useRef(null);
+  const router = useRouter();
 
   const handleCloseBanner = () => {
     setShowBanner(false);
@@ -27,12 +29,12 @@ export default function Layout({ children }) {
   }, []);
 
   useEffect(() => {
-    if (!sessionStorage.getItem(WELCOME_SEEN_KEY)) {
+    if (router.pathname === '/' && !sessionStorage.getItem(WELCOME_SEEN_KEY)) {
       setIsExploding(true);
       setShowBanner(true);
       sessionStorage.setItem(WELCOME_SEEN_KEY, 'true');
     }
-  }, []);
+  }, [router.pathname]);
 
   useEffect(() => {
     if (!headerRef.current) return;
