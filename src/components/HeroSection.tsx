@@ -53,7 +53,7 @@ const HeroSection = ({ section }) => {
           <Image
             src={urlForImage(section[0].image).url()}
             fill
-            alt=""
+            alt={section[0].title || 'Cameron Loxdale'}
             className="rounded-md object-contain"
             style={shadowStyle}
           />

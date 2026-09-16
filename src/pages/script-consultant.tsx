@@ -18,14 +18,14 @@ const CONTENT_IMAGES = [
     src: '/fnl.png',
     width: 750,
     height: 1334,
-    alt: '',
+    alt: "Cameron Loxdale on the set of Channel 4's Friday Night Live",
     caption: "Me on the set of Channel 4's Friday Night Live. (The one from 2022 not the 80s, I’m very young.)",
   },
   {
     src: '/bafta.jpg',
     width: 3024,
     height: 4032,
-    alt: '',
+    alt: 'Cameron Loxdale with Kat Sadler and her BAFTA',
     caption: 'Me with TV’s Kat Sadler and her bloody BAFTA',
   },
 ];
@@ -129,7 +129,7 @@ function ScriptConsultantContent() {
         rel="noopener noreferrer"
         className={`underline inline-block transition-all duration-200 hover:text-2xl ${theme === 'dark' ? 'text-darkPrimary' : 'text-lightPrimary'}`}
       >
-        google form
+        google form<span className="sr-only"> (opens in a new tab)</span>
       </a>
       .
     </p>,
@@ -205,7 +205,7 @@ function ScriptConsultantContent() {
 
   return (
     <div className="flex flex-col gap-20 font-fira text-base max-w-2xl lg:max-w-6xl">
-      <h1 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h1>
+      <h2 className={`font-gogh text-lg p-3 w-content inline-block rounded-sm rotate-3 ${bgColor} ${textColor}`}>SCRIPT CONSULTANT</h2>
 
       <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-40 mb-10">
         <div className="flex flex-col gap-20">

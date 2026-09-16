@@ -52,30 +52,42 @@ const Header = forwardRef((props, ref) => {
             <li className=''>
               <SmoothScrollLink to="#credits" offset={SCROLL_OFFSET}>Comedy Writer</SmoothScrollLink>
             </li>
-            <hr className="w-px h-6 border-0 bg-current self-center" />
+            <li aria-hidden="true">
+              <hr className="w-px h-6 border-0 bg-current self-center" />
+            </li>
             <li className=''>
               <Link href="/script-consultant">Script Consultant</Link>
             </li>
           </ul>
-          <div onClick={toggleDropdown} className="cursor-pointer ml-4 z-50">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-              className={` ${theme === 'dark' ? 'svg-dark' : 'svg-light'}`}
+          <div className="relative ml-4 z-50">
+            <button
+              type="button"
+              onClick={toggleDropdown}
+              aria-haspopup="true"
+              aria-expanded={isDropdownVisible}
+              aria-label="Change colour theme"
+              className="cursor-pointer flex"
             >
-              <g clipPath="url(#clip0)">
-                <path d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <path fill="#fff" d="M0 0h24v24H0z" />
-                </clipPath>
-              </defs>
-            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                aria-hidden="true"
+                className={` ${theme === 'dark' ? 'svg-dark' : 'svg-light'}`}
+              >
+                <g clipPath="url(#clip0)">
+                  <path d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <path fill="#fff" d="M0 0h24v24H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
 
             {isDropdownVisible && (
-              <div className="absolute right-0 mt-2 py-2 w-48 bg-white text-darkText rounded-md shadow-xl z-20">
-                <button onClick={setLightTheme} className={` ${buttonBgLight} block px-4 py-2 text-base uppercase w-full text-left`}>Light</button>
-                <button onClick={setDarkTheme} className={` ${buttonBgDark} block px-4 py-2 text-base uppercase w-full text-left`}>Dark</button>
-                <button onClick={setTooDarkTheme} className="block px-4 py-2 text-base uppercase">Too dark</button>
+              <div role="menu" aria-label="Colour theme" className="absolute right-0 mt-2 py-2 w-48 bg-white text-darkText rounded-md shadow-xl z-20">
+                <button role="menuitemradio" aria-checked={theme === 'light'} onClick={setLightTheme} className={` ${buttonBgLight} block px-4 py-2 text-base uppercase w-full text-left`}>Light</button>
+                <button role="menuitemradio" aria-checked={theme === 'dark'} onClick={setDarkTheme} className={` ${buttonBgDark} block px-4 py-2 text-base uppercase w-full text-left`}>Dark</button>
+                <button role="menuitemradio" aria-checked={theme === 'tooDark'} onClick={setTooDarkTheme} className="block px-4 py-2 text-base uppercase">Too dark</button>
               </div>
             )}
           </div>

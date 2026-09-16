@@ -1,18 +1,31 @@
 import React, { useEffect, useState } from 'react';
 
+const AUTO_DISMISS_MS = 3000;
+
 const Banner = ({ onClose, headerHeight }) => {
   const [visible, setVisible] = useState(true);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
+    if (paused) return;
     const timer = setTimeout(() => {
       setVisible(false);
-      setTimeout(onClose, 800); 
-    }, 3000);
-    return () => clearTimeout(timer); 
-  }, [onClose]);
+      setTimeout(onClose, 800);
+    }, AUTO_DISMISS_MS);
+    return () => clearTimeout(timer);
+  }, [onClose, paused]);
 
   return (
-    <div className={`banner ${visible ? 'slide-down' : 'slide-up'}`} style={headerHeight ? { height: headerHeight } : {}}>
+    <div
+      className={`banner ${visible ? 'slide-down' : 'slide-up'}`}
+      style={headerHeight ? { height: headerHeight } : {}}
+      role="status"
+      aria-live="polite"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
       <span>Congratulations on being the one millionth visitor to cameronloxdale.com !</span>
       <button onClick={onClose} className="close-button" aria-label="Close banner">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20" height="20">
