@@ -178,10 +178,9 @@ function ScriptConsultantContent() {
           further after the notes have been received. My standard rates are:
         </p>,
         <ul key="p11" className="flex flex-col gap-2 list-disc pl-5">
-          <li>TV half hour script (up to 35 pages) - £100</li>
-          <li>TV hour script (up to 65 pages) - £190</li>
+          <li>TV half hour script (up to 35 pages) - £150</li>
+          <li>TV hour script (up to 65 pages) - £200</li>
           <li>Feature length film script (up to 120 pages) - £350</li>
-          <li>Additional 60 minute zoom to discuss your script - £50</li>
         </ul>,
         <p key="p10">
           If your project doesn&rsquo;t fall into these categories or
